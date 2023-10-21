@@ -1,7 +1,6 @@
-import { author, title, url, username } from "@/constants/strings";
+import { author, description, title, url, username } from "@/constants/strings";
 import { Metadata } from "next";
 
-const description: string = `${author}. Explore my personal portfolio, services and blogs.`;
 const og: string = `${url}/og.png`;
 
 export const rootMetadata: Metadata = {

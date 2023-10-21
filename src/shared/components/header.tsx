@@ -14,7 +14,7 @@ function Header() {
   const [path, setPath] = useState(pathname);
   const themeSwitcher = (
     <ThemeSwitcher
-      className="hover:animate-none w-[80px]"
+      className="hover:animate-none !w-[80px]"
       thumbClassName="h-7 w-7"
     />
   );
