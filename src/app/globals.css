@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	html {
+		scroll-behavior: smooth;
+	}
+}
+
+@keyframes scale {
+	0% {
+		transform: scale(1);
+	}
+	10% {
+		transform: scale(1.01);
+	}
+	20% {
+		transform: scale(1.02);
+	}
+	30% {
+		transform: scale(1.03);
+	}
+	40% {
+		transform: scale(1.04);
+	}
+	50% {
+		transform: scale(1.05);
+	}
+	60% {
+		transform: scale(1.06);
+	}
+	80% {
+		transform: scale(1.06);
+	}
+	100% {
+		transform: scale(1.06);
+	}
+}
+.hover\:animate-scale:hover {
+	animation-name: scale;
+	animation-duration: 0.25s;
+	animation-fill-mode: forwards;
+}
