@@ -1,0 +1,7 @@
+.input-container label {
+	display: none;
+}
+
+.input-container:focus-within label {
+	display: block;
+}

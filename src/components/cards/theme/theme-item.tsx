@@ -1,6 +1,6 @@
 import ThemeSwitcher from "@/components/cards/theme/theme-toggle";
 import CardTitle from "@/shared/components/titles/card-title";
-import cardStyle from "@/shared/styles/card-style";
+import cardStyle from "@/shared/styles/card";
 
 export default function ThemeCard({ className }: { className?: string }) {
   return (

@@ -3,7 +3,7 @@
 import DesktopIcon from "@/assets/icons/desktop";
 import DevicesIcon from "@/assets/icons/devices";
 import MobileIcon from "@/assets/icons/mobile";
-import cardStyle from "@/shared/styles/card-style";
+import cardStyle from "@/shared/styles/card";
 import { useState } from "react";
 import AppItem from "./app-item";
 import { mobileApps } from "./data/mobile-apps";

@@ -1,9 +1,13 @@
+"use client";
+
 import { githubIcon } from "@/assets/icons/all-social";
 import AppstoreIcon from "@/assets/icons/appstore";
 import GooglePlayIcon from "@/assets/icons/google-play";
 import PubDevIcon from "@/assets/icons/pub-dev";
+import tagStyle from "@/shared/styles/tag";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import linkByTag from "./data/link-by-tag";
 
 function AppItem({
@@ -19,6 +23,7 @@ function AppItem({
   hideBottomBorder?: boolean;
   hideLearnMore?: boolean;
 }) {
+  const router = useRouter();
   return (
     <div
       key={card.title}
@@ -32,7 +37,7 @@ function AppItem({
       <div className="flex flex-col gap-1.5">
         <div className="flex flex-wrap 2.5xs:!flex-nowrap !flex-row items-start gap-4 underline-offset-2">
           <Image
-            onClick={!!card.link ? () => window.open(card.link) : undefined}
+            onClick={!!card.path ? () => router.push(card.path) : undefined}
             src={card.image}
             alt={card.title}
             width={200}
@@ -40,7 +45,7 @@ function AppItem({
             className={
               "w-18 h-18 xs:w-22 xs:h-22 rounded-[18px]" +
               (card.hasBorder ? " border border-neutral-500/20" : "") +
-              (!!card.link ? " hover:animate-scale cursor-pointer" : "") +
+              (!!card.path ? " hover:animate-scale cursor-pointer" : "") +
               " " +
               card.imageClassName
             }
@@ -115,16 +120,11 @@ function AppItem({
       </div>
       {!hideTags && !!card.tags && (
         <div className="flex flex-row flex-wrap gap-2 opacity-90 mt-3">
-          {card.tags.map((tech: any) => {
-            const link = linkByTag(tech);
+          {card.tags.map((tag: any) => {
+            const link = linkByTag(tag);
             return (
-              <a
-                href={link}
-                target="_blank"
-                key={tech}
-                className="text-[12.5px] bg-neutral-500/10 dark:bg-neutral-500/20 hover:bg-neutral-200 dark:hover:bg-neutral-500/10 rounded-[12px] px-3 py-1 hover:animate-scale"
-              >
-                {tech}
+              <a href={link} target="_blank" key={tag} className={tagStyle}>
+                {tag}
               </a>
             );
           })}

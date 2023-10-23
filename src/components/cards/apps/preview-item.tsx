@@ -1,5 +1,5 @@
 import Image from "next/image";
-import LinkCard from "../links/link-card";
+import LinkCard from "../links/link-item";
 
 function AppPreviewItem({ card }: { card: any }) {
   return (

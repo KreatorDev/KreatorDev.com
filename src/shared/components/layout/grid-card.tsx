@@ -1,5 +1,5 @@
 import CardTitle from "@/shared/components/titles/card-title";
-import cardStyle from "@/shared/styles/card-style";
+import cardStyle from "@/shared/styles/card";
 
 function GridCard({
   title,

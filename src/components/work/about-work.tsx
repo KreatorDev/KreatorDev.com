@@ -2,13 +2,13 @@
 
 import NotFoundEntry from "@/app/not-found";
 import ChevronLeftIcon from "@/assets/icons/chevron-left";
-import cardStyle from "@/shared/styles/card-style";
+import cardStyle from "@/shared/styles/card";
 import { useRouter } from "next/navigation";
 import AppItem from "../cards/apps/app-item";
 import { mobileApps } from "../cards/apps/data/mobile-apps";
 import { webApps } from "../cards/apps/data/web-apps";
 
-function WorkPage({ id }: { id: string }) {
+function AboutWork({ id }: { id: string }) {
   const findWork = [...webApps, ...mobileApps].find(
     (work) => work.path === `/work/${id}`
   );
@@ -40,4 +40,4 @@ function WorkPage({ id }: { id: string }) {
   );
 }
 
-export default WorkPage;
+export default AboutWork;

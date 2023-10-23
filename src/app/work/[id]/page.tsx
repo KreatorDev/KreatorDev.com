@@ -1,6 +1,6 @@
-import WorkPage from "@/components/work/work-page";
+import AboutWork from "@/components/work/about-work";
 
-export default function WorkPageEntry({ params }: { params: any }) {
+export default function AboutWorkEntry({ params }: { params: any }) {
   const { id } = params;
-  return <WorkPage id={id} />;
+  return <AboutWork id={id} />;
 }

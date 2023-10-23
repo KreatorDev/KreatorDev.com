@@ -1,5 +1,5 @@
 import GoHomeButton from "@/shared/components/buttons/go-home-button";
-import cardStyle from "@/shared/styles/card-style";
+import cardStyle from "@/shared/styles/card";
 
 export default function NotFound({ err }: { err?: string }) {
   return (

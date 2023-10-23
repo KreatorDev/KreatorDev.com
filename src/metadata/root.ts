@@ -1,4 +1,11 @@
-import { author, description, title, url, username } from "@/constants/strings";
+import {
+  author,
+  description,
+  host,
+  title,
+  url,
+  username,
+} from "@/constants/strings";
 import { Metadata } from "next";
 
 const og: string = `${url}/og.png`;
@@ -32,7 +39,7 @@ export const rootMetadata: Metadata = {
     images: [
       {
         url: og,
-        alt: url.replace("https://", ""),
+        alt: host,
       },
     ],
   },

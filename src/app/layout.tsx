@@ -22,7 +22,7 @@ export default function RootLayout({
       >
         <Providers>
           <Header />
-          <main className="h-full justify-center items-center m-auto py-4 xs:py-10">
+          <main className="h-full w-full justify-center items-center m-auto py-4 xs:py-10">
             {children}
           </main>
           <Footer />

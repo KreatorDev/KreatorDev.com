@@ -44,6 +44,7 @@ const config: Config = {
         "8xl": "1340px",
       },
       fontSize: {
+        "2xs": "13px",
         md: "15px",
       },
     },

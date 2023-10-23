@@ -1,7 +1,7 @@
 import { githubIcon } from "@/assets/icons/all-social";
 import { title } from "@/constants/strings";
 import linksMetadata from "@/metadata/links";
-import cardStyle from "../styles/card-style";
+import cardStyle from "../styles/card";
 
 function Footer() {
   const year = new Date().getFullYear();
@@ -15,7 +15,7 @@ function Footer() {
     <footer
       className={
         cardStyle +
-        "!py-3 my-6 flex flex-col sm:flex-row items-center justify-center rounded-3xl sm:justify-between w-full text-sm text-neutral-500 text-center gap-3"
+        "!py-3 my-6 flex flex-col sm:flex-row items-center justify-center rounded-3xl sm:justify-between w-full text-sm text-neutral-500 text-center gap-3 h-fit"
       }
     >
       <div className="flex flex-wrap items-center justify-center">

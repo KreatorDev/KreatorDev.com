@@ -6,7 +6,7 @@ import AppPaths from "@/constants/paths";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import useAppPathname from "../hooks/pathname";
-import cardStyle from "../styles/card-style";
+import cardStyle from "../styles/card";
 import useDropDownMenu from "./dropdowns/menu";
 
 function Header() {
@@ -27,7 +27,7 @@ function Header() {
   const btnStyle =
     "py-4 px-6 sm:py-[8px] sm:px-4 dark:hover:bg-neutral-800 hover:bg-neutral-200/70 dark:hover:text-white hover:text-black rounded-full ";
   const items = AppPaths.main.map((card) => {
-    const isSelected = path.replace("#", "") === card.path.replace("#", "");
+    const isSelected = path === card.path;
     return (
       <Link
         key={card.name}
@@ -35,7 +35,7 @@ function Header() {
           setPath(card.path);
           if (dropDown.isOpen) dropDown.setOpen(false);
         }}
-        href={card.path.replace("#", "")}
+        href={card.path}
       >
         <div
           className={

@@ -1,7 +1,7 @@
 import DevicesIcon from "@/assets/icons/devices";
 import CardButton from "@/shared/components/buttons/card-button";
 import CardTitle from "@/shared/components/titles/card-title";
-import cardStyle from "@/shared/styles/card-style";
+import cardStyle from "@/shared/styles/card";
 import Link from "next/link";
 import AppItem from "./app-item";
 import { mobileApps } from "./data/mobile-apps";
