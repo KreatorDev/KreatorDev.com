@@ -8,7 +8,7 @@ function useDropDownMenu({ menu }: { menu?: JSX.Element }) {
     <div className="absolute" role="menu">
       {isOpen && (
         <div
-          className="fixed inset-0 backdrop-blur-md bg-neutral-800/60 z-40"
+          className="fixed inset-0 backdrop-blur-sm bg-neutral-800/20 z-40"
           onClick={() => setOpen(false)}
         />
       )}

@@ -12,7 +12,9 @@ function LinkCard({
 }) {
   return (
     <Link
+      scroll={false}
       href={href}
+      passHref
       target="_blank"
       className={
         "relative flex flex-col items-center justify-center w-18 h-18 bg-dark shadow-sm rounded-[18px] hover:animate-scale " +
