@@ -4,6 +4,7 @@ import DesktopIcon from "@/assets/icons/desktop";
 import DevicesIcon from "@/assets/icons/devices";
 import MobileIcon from "@/assets/icons/mobile";
 import cardStyle from "@/shared/styles/card";
+import { scrollToTop } from "@/shared/utils/window";
 import { useState } from "react";
 import AppItem from "./app-item";
 import { mobileApps } from "./data/mobile-apps";
@@ -40,8 +41,8 @@ function AllAppsList() {
           <button
             type="button"
             onClick={() => {
+              scrollToTop();
               setSelected(filter.name);
-              window.scrollTo(0, 0);
             }}
             key={filter.name}
             className={

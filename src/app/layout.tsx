@@ -1,5 +1,5 @@
 import Providers from "@/lib/provider";
-import { rootMetadata } from "@/metadata/root";
+import rootMetadata from "@/metadata/root";
 import Footer from "@/shared/components/footer";
 import Header from "@/shared/components/header";
 import localFont from "next/font/local";

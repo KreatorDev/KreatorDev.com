@@ -7,6 +7,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import useAppPathname from "../hooks/pathname";
 import cardStyle from "../styles/card";
+import { scrollToTop } from "../utils/window";
 import useDropDownMenu from "./dropdowns/menu";
 
 function Header() {
@@ -32,6 +33,7 @@ function Header() {
       <Link
         key={card.name}
         onClick={() => {
+          scrollToTop();
           setPath(card.path);
           if (dropDown.isOpen) dropDown.setOpen(false);
         }}

@@ -13,6 +13,7 @@ import inputStyle from "@/shared/styles/input";
 import "@/shared/styles/input.css";
 import { useState } from "react";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
+import LinksGridCard from "../cards/links/links-grid";
 
 const getTextById = (id: string): string | undefined => {
   try {
@@ -27,7 +28,7 @@ export default function Contact() {
   const { executeRecaptcha } = useGoogleReCaptcha();
   const alertDialog = useAlert({
     Alert: AlertDialog,
-    iniAlert: { type: AlertEnum.ERROR, className: "!bottom-34" },
+    iniAlert: { type: AlertEnum.ERROR, className: "" },
   });
   const loadingButton = useLoadingButton({
     props: {
@@ -44,7 +45,7 @@ export default function Contact() {
                   throw {
                     title:
                       id.charAt(0).toUpperCase() + id.slice(1) + " is required",
-                    description: "Please enter your " + id + " field",
+                    description: "Please enter your " + id + " to continue",
                     type: AlertEnum.WARNING,
                   };
               });
@@ -113,48 +114,52 @@ export default function Contact() {
 
   return (
     <>
-      <form onSubmit={handleSubmit} className={cardStyle + " gap-7"}>
-        <CardTitle title="Contact" icon={<MailIcon />} />
-        <p className="text-[14px] pb-1">
-          <a className="opacity-60">
-            Contact me by filling out the form below, or by sending to{" "}
-          </a>
-          <a
-            className="hover:underline font-medium opacity-70 dark:!opacity-80"
-            href={"mailto:" + mail}
-          >
-            {mail}
-          </a>
-        </p>
-        <TextInput
-          required
-          id="name"
-          type="text"
-          label="Name"
-          placeholder="Enter your name"
-        />
-        <TextInput
-          required
-          id="email"
-          type="email"
-          label="Email"
-          placeholder="Enter your email address"
-        />
-        <TextInput
-          required
-          isTextArea
-          id="message"
-          minLength={5}
-          maxLength={10000}
-          rows={3}
-          label="Message"
-          placeholder="Write your message here..."
-        />
-        <div className="w-full flex justify-end">
-          {loadingButton.loadingButton}
-        </div>
-      </form>
-      {alertDialog.alert}
+      <div className="flex flex-col">
+        <form onSubmit={handleSubmit} className={cardStyle + " gap-7"}>
+          <CardTitle title="CONTACT" icon={<MailIcon />} />
+          <p className="text-md pb-1">
+            <a className="opacity-70">
+              Contact me by filling out the form below, or by sending to{" "}
+            </a>
+            <a
+              className="hover:underline font-medium opacity-70 dark:!opacity-80"
+              href={"mailto:" + mail}
+            >
+              {mail}
+            </a>
+          </p>
+          <TextInput
+            required
+            id="name"
+            type="text"
+            label="Name"
+            placeholder="Enter your name"
+          />
+          <TextInput
+            required
+            id="email"
+            type="email"
+            label="Email"
+            placeholder="Enter your email address"
+          />
+          <TextInput
+            required
+            isTextArea
+            id="message"
+            minLength={5}
+            maxLength={10000}
+            rows={3}
+            label="Message"
+            placeholder="Write your message here..."
+          />
+          <div className="w-full flex justify-end">
+            {loadingButton.loadingButton}
+          </div>
+          {alertDialog.alert}
+        </form>
+        <div className="py-3" />
+        <LinksGridCard />
+      </div>
     </>
   );
 }

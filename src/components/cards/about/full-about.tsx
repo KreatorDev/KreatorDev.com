@@ -1,3 +1,4 @@
+import { about } from "@/constants/strings";
 import cardStyle from "@/shared/styles/card";
 import Image from "next/image";
 
@@ -15,7 +16,7 @@ export default function FullAboutCard() {
         <p className="text-xl font-bold py-4">
           <a className="opacity-70">Hi, I{"'"}m Ayoub </a>👋
         </p>
-        <p className="opacity-90 text-3xl font-bold">
+        <p className="opacity-95 text-3xl font-bold">
           Passionate about building{" "}
           <a href="/work" className="underline underline-offset-4">
             Apps
@@ -24,14 +25,13 @@ export default function FullAboutCard() {
         </p>
         <p className="text-lg text-neutral-500 py-3">
           a{" "}
-          <a className="font-semibold text-dark dark:text-light/80">
+          <a className="font-semibold text-dark dark:text-light/90">
             software developer
           </a>{" "}
           based in Morocco.
         </p>
         <p className="text-[17px] text-neutral-500 2xs:px-2 xs:px-5 leading-relaxed">
-          Currently interested on developing quality applications as solutions
-          that effectively solve problems, rather than just providing solutions.
+          {about}
         </p>
       </div>
     </div>

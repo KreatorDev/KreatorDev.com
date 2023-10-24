@@ -6,18 +6,19 @@ import linkByTag from "../apps/data/link-by-tag";
 import { mobileApps } from "../apps/data/mobile-apps";
 import { webApps } from "../apps/data/web-apps";
 
+export const uniqueTags = [...webApps, ...mobileApps]
+  .map((item) => item.tags || [])
+  .flat()
+  .filter((item, index, array) => array.indexOf(item) === index)
+  .sort();
+
 export default function ExperiencesCard({ className }: { className?: string }) {
-  const list = [...webApps, ...mobileApps]
-    .map((item) => item.tags || [])
-    .flat()
-    .filter((item, index, array) => array.indexOf(item) === index)
-    .sort();
   return (
     <div className={cardStyle + className}>
       <CardTitle title="EXPERIENCES" icon={<DevicesIcon />} />
       <div className="h-5" />
       <div className="flex flex-wrap w-full gap-2">
-        {list.map((tag: any) => {
+        {uniqueTags.map((tag: any) => {
           const link = linkByTag(tag);
           return (
             <a

@@ -43,7 +43,7 @@ function AppItem({
             width={200}
             height={200}
             className={
-              "w-18 h-18 xs:w-22 xs:h-22 rounded-[18px]" +
+              "w-18 h-18 xs:w-22 xs:h-22 rounded-[18px] bg-neutral-500/10 " +
               (card.hasBorder ? " border border-neutral-500/20" : "") +
               (!!card.path ? " hover:animate-scale cursor-pointer" : "") +
               " " +

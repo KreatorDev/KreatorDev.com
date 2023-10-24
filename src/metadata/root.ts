@@ -2,15 +2,14 @@ import {
   author,
   description,
   host,
+  og,
   title,
   url,
   username,
 } from "@/constants/strings";
 import { Metadata } from "next";
 
-const og: string = `${url}/og.png`;
-
-export const rootMetadata: Metadata = {
+const rootMetadata: Metadata = {
   title,
   description,
   creator: author,
@@ -58,3 +57,5 @@ export const rootMetadata: Metadata = {
     "TypeScript",
   ],
 };
+
+export default rootMetadata;
