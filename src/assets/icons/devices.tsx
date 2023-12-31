@@ -1,5 +1,5 @@
 const DevicesIcon = (props: any) => (
-  <svg viewBox="0 0 24 24" fill="none" className="w-5 h-5" k={...props}>
+  <svg viewBox="0 0 24 24" fill="none" className="w-5 h-5" {...props}>
     <path
       fillRule="evenodd"
       clipRule="evenodd"

@@ -1,8 +1,3 @@
-import MobileIcon from "@/assets/icons/mobile";
-import CardButton from "@/shared/components/buttons/card-button";
-import GridCard from "@/shared/components/layout/grid-card";
-import Link from "next/link";
-import AppItem from "../app-item";
 import AppItemType from "./app";
 
 export const mobileApps: AppItemType[] = [
@@ -256,28 +251,3 @@ export const mobileApps: AppItemType[] = [
     hasBorder: true,
   },
 ];
-
-function MobileAppsList() {
-  return (
-    <GridCard
-      footer={
-        <div className="w-full">
-          <Link href="/work/#mobile" className="mt-1">
-            <CardButton
-              title="VIEW ALL"
-              className="hover:animate-scale float-right"
-            />
-          </Link>
-        </div>
-      }
-      icon={<MobileIcon />}
-      title="MOBILE"
-    >
-      {mobileApps.map((card) => (
-        <AppItem key={card.title} card={card} />
-      ))}
-    </GridCard>
-  );
-}
-
-export default MobileAppsList;

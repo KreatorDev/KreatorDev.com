@@ -1,8 +1,3 @@
-import DesktopIcon from "@/assets/icons/desktop";
-import CardButton from "@/shared/components/buttons/card-button";
-import GridCard from "@/shared/components/layout/grid-card";
-import Link from "next/link";
-import AppItem from "../app-item";
 import AppItemType from "./app";
 
 export const webApps: AppItemType[] = [
@@ -58,28 +53,3 @@ export const webApps: AppItemType[] = [
     hasBorder: true,
   },
 ];
-
-function WebAppsList() {
-  return (
-    <GridCard
-      footer={
-        <div className="w-full">
-          <Link href="/work/#web" className="mt-1">
-            <CardButton
-              title="VIEW ALL"
-              className="hover:animate-scale float-right"
-            />
-          </Link>
-        </div>
-      }
-      icon={<DesktopIcon />}
-      title="WEB"
-    >
-      {webApps.map((card) => (
-        <AppItem key={card.title} card={card} />
-      ))}
-    </GridCard>
-  );
-}
-
-export default WebAppsList;

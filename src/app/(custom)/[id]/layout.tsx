@@ -31,8 +31,8 @@ export function generateMetadata({
 }): Metadata | undefined {
   const { id } = params;
   const page = getAppPage(id);
-  if (!page) return;
-  const app = page.app;
+  const app = page?.app;
+  if (!page || !app) return;
   return metadataBuilder(app.title, app.description, {
     og: app.image,
     icons: app.image,
