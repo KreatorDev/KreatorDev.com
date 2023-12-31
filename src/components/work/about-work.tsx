@@ -1,6 +1,6 @@
 "use client";
 
-import NotFoundEntry from "@/app/not-found";
+import NotFoundEntry from "@/app/(root)/not-found";
 import ChevronLeftIcon from "@/assets/icons/chevron-left";
 import cardStyle from "@/shared/styles/card";
 import { useRouter } from "next/navigation";

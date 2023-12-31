@@ -26,9 +26,9 @@ export default function PreviewAboutCard({
           height={69}
         />
       </div>
-      <p className="text-base font-normal opacity-70 leading-relaxed mt-3 mb-6">
+      <span className="text-base font-normal opacity-70 leading-relaxed mt-3 mb-6">
         {shortAbout}
-      </p>
+      </span>
       <Link
         onClick={() => {
           scrollToTop();

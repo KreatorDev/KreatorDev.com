@@ -52,18 +52,16 @@ function AppItem({
           />
           <div className="flex flex-col">
             <div className="flex flex-wrap gap-0.5 align-baseline">
-              <a
-                href={card.link}
-                target="_blank"
+              <Link
+                href={card.link ?? card.path}
+                target={!!card.link ? "_blank" : undefined}
                 className={
-                  "text-lg font-medium" +
-                  (!!card.link
-                    ? " cursor-pointer hover:underline after:content-['__↗']"
-                    : "")
+                  "text-lg font-medium cursor-pointer hover:underline" +
+                  (!!card.link ? " after:content-['__↗']" : "")
                 }
               >
                 {card.title}
-              </a>
+              </Link>
               {!!card.github && (
                 <a
                   href={card.github}

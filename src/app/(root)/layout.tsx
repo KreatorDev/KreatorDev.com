@@ -3,7 +3,7 @@ import rootMetadata from "@/metadata/root";
 import Footer from "@/shared/components/footer";
 import Header from "@/shared/components/header";
 import localFont from "next/font/local";
-import "./globals.css";
+import "./../globals.css";
 
 export const metadata = rootMetadata;
 
@@ -32,25 +32,25 @@ export default function RootLayout({
   );
 }
 
-const font = localFont({
+export const font = localFont({
   src: [
     {
-      path: "../../public/fonts/chirp/regular.woff",
+      path: "../../../public/fonts/chirp/regular.woff",
       weight: "400",
       style: "normal",
     },
     {
-      path: "../../public/fonts/chirp/medium.woff",
+      path: "../../../public/fonts/chirp/medium.woff",
       weight: "500",
       style: "normal",
     },
     {
-      path: "../../public/fonts/chirp/bold.woff",
+      path: "../../../public/fonts/chirp/bold.woff",
       weight: "700",
       style: "normal",
     },
     {
-      path: "../../public/fonts/chirp/heavy.woff",
+      path: "../../../public/fonts/chirp/heavy.woff",
       weight: "900",
       style: "normal",
     },

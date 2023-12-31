@@ -3,8 +3,9 @@ import CardButton from "@/shared/components/buttons/card-button";
 import GridCard from "@/shared/components/layout/grid-card";
 import Link from "next/link";
 import AppItem from "../app-item";
+import AppItemType from "./app";
 
-export const webApps = [
+export const webApps: AppItemType[] = [
   {
     title: "Dreamshow",
     description:

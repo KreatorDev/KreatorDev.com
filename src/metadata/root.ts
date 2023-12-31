@@ -1,52 +1,8 @@
-import {
-  author,
-  description,
-  host,
-  og,
-  title,
-  url,
-  username,
-} from "@/constants/strings";
+import { description, og, title } from "@/constants/strings";
 import { Metadata } from "next";
+import metadataBuilder from "./builder";
 
-const rootMetadata: Metadata = {
-  title,
-  description,
-  creator: author,
-  publisher: author,
-  authors: [
-    {
-      name: author,
-      url,
-    },
-  ],
-  twitter: {
-    card: "summary_large_image",
-    title,
-    description,
-    images: [og],
-    creator: "@" + username,
-  },
-  metadataBase: new URL(url),
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    url,
-    title,
-    description,
-    siteName: title,
-    images: [
-      {
-        url: og,
-        alt: host,
-      },
-    ],
-  },
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon-32x32.png",
-    apple: "/apple-touch-icon.png",
-  },
+const rootMetadata: Metadata = metadataBuilder(title, description, {
   keywords: [
     "Mobile",
     "Flutter",
@@ -56,6 +12,12 @@ const rootMetadata: Metadata = {
     "React",
     "TypeScript",
   ],
-};
+  og,
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon-32x32.png",
+    apple: "/apple-touch-icon.png",
+  },
+});
 
 export default rootMetadata;

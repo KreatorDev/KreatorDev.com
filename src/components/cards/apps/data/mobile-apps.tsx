@@ -3,8 +3,21 @@ import CardButton from "@/shared/components/buttons/card-button";
 import GridCard from "@/shared/components/layout/grid-card";
 import Link from "next/link";
 import AppItem from "../app-item";
+import AppItemType from "./app";
 
-export const mobileApps = [
+export const mobileApps: AppItemType[] = [
+  {
+    title: "GymTracker",
+    description:
+      "A gym workout app to track your workouts, offering features like workout plans, progress tracking, and more.",
+    image: "/works/gymtracker/logo.jpg",
+    appstore: "https://apps.apple.com/app/id6474942205",
+    playstore:
+      "https://play.google.com/store/apps/details?id=com.kreatordev.gymtracker",
+    path: "/gymtracker",
+    tags: ["Flutter", "AdMob", "RevenueCat", "Localization"],
+    hasBorder: true,
+  },
   {
     title: "Radio Mobile",
     description:
