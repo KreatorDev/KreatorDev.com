@@ -12,6 +12,9 @@ export default function AppPage({ page }: { page: AppPageType }) {
   if (!app) return;
 
   const legalStyle = "text-sm opacity-30 hover:opacity-100 hover:underline p-2";
+  const height = 121;
+  const style = "hover:opacity-50 h-[60px]";
+  const width = widthFactor(396, 121, 60);
   const now = Date.now();
   return (
     <div className={cardStyle + "!p-3"}>
@@ -47,20 +50,20 @@ export default function AppPage({ page }: { page: AppPageType }) {
         </p>
         <div className="h-4" />
         <div className="flex flex-wrap justify-center items-center gap-x-5 gap-y-3">
-          <a href={app.playstore} target="_blank" className="hover:opacity-50">
+          <a href={app.playstore} target="_blank" className={style}>
             <Image
               src="/other/google-play.png"
               alt="Google Play"
-              height={121}
-              width={widthFactor(396, 121, 60)}
+              height={height}
+              width={width}
             />
           </a>
-          <a href={app.appstore} target="_blank" className="hover:opacity-50">
+          <a href={app.appstore} target="_blank" className={style}>
             <Image
               src="/other/app-store.png"
               alt="App Store"
-              height={121}
-              width={widthFactor(396, 121, 60)}
+              height={height}
+              width={width}
             />
           </a>
         </div>

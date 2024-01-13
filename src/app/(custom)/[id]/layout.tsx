@@ -35,8 +35,12 @@ export function generateMetadata({
   if (!page || !app) return;
   return metadataBuilder(app.title, app.description, {
     og: app.image,
-    icons: app.image,
+    icons: {
+      icon: app.icon ?? app.image,
+      shortcut: app.image,
+      apple: app.image,
+    },
     path: `/${id}`,
-    keywords: app.tags,
+    keywords: app.keywords ?? app.tags,
   });
 }

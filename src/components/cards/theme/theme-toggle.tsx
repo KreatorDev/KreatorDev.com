@@ -29,7 +29,7 @@ export default function ThemeSwitcher({
         }
       >
         <SunIcon className="dark:hidden  text-yellow-400 transition-all duration-300" />
-        <NightIcon className="hidden dark:block text-slate-600 transition-all duration-300" />
+        <NightIcon className="hidden dark:block text-slate-500 transition-all duration-300" />
       </div>
     </button>
   );

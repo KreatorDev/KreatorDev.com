@@ -65,7 +65,7 @@ function Header() {
       <div
         className={
           cardStyle +
-          "!p-1 !flex-row items-center justify-between rounded-3xl w-full text-sm text-neutral-500 text-center"
+          "!p-1 !flex-row items-center justify-between rounded-3xl w-full text-sm text-neutral-500 text-center !px-1.5"
         }
       >
         <div className="hidden sm:flex flex-wrap items-center w-full">

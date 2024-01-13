@@ -1,8 +1,10 @@
 type AppItemType = {
   title: string;
   description: string;
+  icon?: string;
   image: string;
   path: string;
+  keywords?: string[];
   tags: string[];
   hasBorder?: boolean;
   link?: string;
