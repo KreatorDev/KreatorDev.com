@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "ZY25APARZZ.com.kreatordev.gymtracker",
+        "paths": [
+          "/gymtracker/*"
+        ]
+      }
+    ]
+  }
+}
