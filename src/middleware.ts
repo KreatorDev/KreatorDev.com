@@ -4,10 +4,9 @@ import getAppPage from "./components/cards/app-page/data/get-object";
 export async function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
   const paths = pathname.split("/");
-  const lastPath = paths[paths.length - 1];
   const next = NextResponse.next();
-  if (lastPath === "download" && paths.length > 1) {
-    const id = paths[paths.length - 2];
+  if (paths.length > 1) {
+    const id = paths[1];
     const page = getAppPage(id);
     const app = page?.app;
     if (!page || !app) return next;
@@ -17,6 +16,8 @@ export async function middleware(req: NextRequest) {
       return NextResponse.redirect(app.appstore);
     if (app.playstore && os === "Android")
       return NextResponse.redirect(app.playstore);
+    if (paths.length > 3)
+      return NextResponse.redirect(req.nextUrl.origin + "/" + app.path);
   }
   return next;
 }
