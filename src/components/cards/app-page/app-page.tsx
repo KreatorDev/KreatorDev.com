@@ -34,7 +34,7 @@ export default function AppPage({ page }: { page: AppPageType }) {
           thumbClassName="h-7 w-7"
         />
       </div>
-      <div className="h-7" />
+      <div className="h-12" />
       <div className="w-full flex flex-col items-center justify-center text-center gap-3.5">
         <Image
           className="rounded-full p-2 bg-neutral-500/10 hover:animate-scale"
@@ -68,19 +68,21 @@ export default function AppPage({ page }: { page: AppPageType }) {
           </a>
         </div>
       </div>
-      <div className="h-14" />
-      <div className="flex flex-row w-full justify-between items-center gap-4 px-3">
-        <Link href={app.path + page.privacy} className={legalStyle}>
-          Privacy Policy
-        </Link>
-        {page.terms && (
-          <div className="w-1 h-1 bg-neutral-500/80 rounded-full" />
-        )}
-        {page.terms && (
-          <Link href={app.path + page.terms} className={legalStyle}>
-            Terms of Service
+      <div className="h-18" />
+      <div className="flex flex-wrap w-full justify-center sm:justify-between items-center gap-x-12 px-3">
+        <div className="flex flex-wrap items-center justify-center gap-x-1.5">
+          <Link href={app.path + page.privacy} className={legalStyle}>
+            Privacy Policy
           </Link>
-        )}
+          {page.terms && (
+            <div className="w-1 h-1 bg-neutral-500/80 rounded-full" />
+          )}
+          {page.terms && (
+            <Link href={app.path + page.terms} className={legalStyle}>
+              Terms of Use
+            </Link>
+          )}
+        </div>
         <Link href={app.path} className={legalStyle}>
           {app.title} © {new Date(now).getFullYear()}
         </Link>
