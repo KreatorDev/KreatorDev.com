@@ -6,6 +6,7 @@ export async function middleware(req: NextRequest) {
   const paths = pathname.split("/");
   const next = NextResponse.next();
   if (paths.length > 1) {
+    if (paths.length <= 2) return next;
     const lastPath = paths[paths.length - 1];
     if (lastPath === "privacy" || lastPath === "terms") return next;
     const id = paths[1];
