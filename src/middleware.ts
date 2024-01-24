@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse, userAgent } from "next/server";
 import getAppPage from "./components/cards/app-page/data/get-object";
 
-export async function middleware(req: NextRequest) {
+export function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
   const paths = pathname.split("/");
   const next = NextResponse.next();
