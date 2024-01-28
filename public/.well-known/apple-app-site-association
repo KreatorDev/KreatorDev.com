@@ -3,7 +3,7 @@
     "apps": [],
     "details": [
       {
-        "appID": "ZY25APARZZ.com.kreatordev.gymtracker",
+        "appID": "ZY25APARZZ.com.kreatordev.gym",
         "paths": [
           "/gymtracker/*"
         ]

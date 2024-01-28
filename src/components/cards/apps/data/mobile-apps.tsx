@@ -7,7 +7,7 @@ export const mobileApps: AppItemType[] = [
       "A gym workout app to track your workouts, offering features like workout plans, progress tracking, and more.",
     icon: "/works/gymtracker/logo.ico",
     image: "/works/gymtracker/logo.jpg",
-    appstore: "https://apps.apple.com/app/id6474942205",
+    appstore: "https://apps.apple.com/app/id6476830400",
     playstore:
       "https://play.google.com/store/apps/details?id=com.kreatordev.gymtracker",
     path: "/gymtracker",
