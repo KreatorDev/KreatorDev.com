@@ -5,6 +5,8 @@ type AppPageType = {
   privacy?: string;
   terms?: string;
   privacyOptions?: PrivacyOptions;
+  appstoreId?: string;
+  playstoreId?: string;
 };
 
 type PrivacyOptions = {

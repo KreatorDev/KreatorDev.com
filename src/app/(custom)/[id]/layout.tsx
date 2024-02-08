@@ -33,7 +33,7 @@ export function generateMetadata({
   const page = getAppPage(id);
   const app = page?.app;
   if (!page || !app) return;
-  return metadataBuilder(app.title, app.description, {
+  const res = metadataBuilder(app.title, app.description, {
     og: app.image,
     icons: {
       icon: app.icon ?? app.image,
@@ -43,4 +43,23 @@ export function generateMetadata({
     path: `/${id}`,
     keywords: app.keywords ?? app.tags,
   });
+  res.twitter = {
+    card: "app",
+    site: "@kreatordev",
+    description: app.description,
+    app: {
+      id: {
+        googleplay: page.playstoreId,
+        ipad: page.appstoreId,
+        iphone: page.appstoreId,
+      },
+      name: app.title,
+      url: {
+        googleplay: app.playstore,
+        ipad: app.appstore,
+        iphone: app.appstore,
+      },
+    },
+  };
+  return res;
 }
