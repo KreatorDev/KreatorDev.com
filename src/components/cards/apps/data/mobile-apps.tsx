@@ -67,6 +67,33 @@ export const mobileApps: AppItemType[] = [
     hasBorder: true,
   },
   {
+    title: "nosugar",
+    description:
+      "Keto diet tracker for a sugar-free lifestyle providing AI-powered keto menu and food barcode scanners.",
+    image: "/works/nosugar/logo.png",
+    appstore: "https://apps.apple.com/app/id6477765406",
+    path: "/work/nosugar-mobile",
+    tags: ["Flutter", "Node.js", "LLM", "RevenueCat"],
+  },
+  {
+    title: "Voice chat AI",
+    description:
+      "Create AI characters with voice replies, experience the magic of AI as characters respond with realistic voice messages.",
+    image: "/works/voice-chat/logo.png",
+    appstore: "https://apps.apple.com/app/id6478330374",
+    path: "/work/voice-chat",
+    tags: ["Flutter", "Node.js", "LLM", "RevenueCat"],
+  },
+  {
+    title: "zima",
+    description:
+      "AI health coach that provides personalized AI tips, reminders, and advice for a healthier you.",
+    image: "/works/zima/logo.png",
+    appstore: "https://apps.apple.com/app/id6477898586",
+    path: "/work/zima-mobile",
+    tags: ["Flutter", "Node.js", "LLM", "RevenueCat"],
+  },
+  {
     title: "Snapsaga",
     description:
       "AI chat stories app to play or create AI characters and simulate their own persona in those stories.",

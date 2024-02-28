@@ -40,6 +40,8 @@ const linkByTag = (tech: string): string | undefined => {
       return "https://openai.com/research/whisper";
     case "Alpaca":
       return "https://alpaca.markets/docs";
+    case "NestJS":
+      return "https://nestjs.com";
     default:
       return;
   }
