@@ -1,6 +1,6 @@
 import { githubIcon } from "@/assets/icons/all-social";
 import { title } from "@/constants/strings";
-import linksMetadata from "@/metadata/links";
+import linksMetadata, { sourceCode } from "@/metadata/links";
 import cardStyle from "../styles/card";
 
 function Footer() {
@@ -23,11 +23,7 @@ function Footer() {
         <div className="w-1" />
         {github}
         <p className="mx-3 hidden 2xs:block">|</p>
-        <a
-          className={onHoverStyle + " flex"}
-          target="_blank"
-          href={linksMetadata.github + "/" + title + ".com"}
-        >
+        <a className={onHoverStyle + " flex"} target="_blank" href={sourceCode}>
           Source code
           <div className="w-1.5" />
           <div className="w-4 bg-current rounded-full m-auto">{githubIcon}</div>
