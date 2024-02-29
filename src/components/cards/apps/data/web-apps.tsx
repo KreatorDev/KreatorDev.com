@@ -4,7 +4,7 @@ export const webApps: AppItemType[] = [
   {
     title: "Friend Renting",
     description:
-      "Rent experienced people, whether you seek advice, project assistance, or a friendly conversation. Monetize your skills by offering your expertise and turn your time into income.",
+      "Rent experienced people, whether you seek advice, project assistance, or a friendly conversation. Also you can monetize your skills by offering your expertise and turn your time into income.",
     image: "/works/friendrenting/logo.png",
     link: "https://friendrenting.com",
     path: "https://friendrenting.com",
@@ -12,7 +12,8 @@ export const webApps: AppItemType[] = [
   },
   {
     title: "zima",
-    description: "Landing page of an AI health coach mobile app.",
+    description:
+      "Landing page that showcases the functionality of the zima mobile app through compelling storytelling.",
     image: "/works/zima/logo.png",
     link: "https://www.zima.coach",
     path: "https://www.zima.coach",
@@ -40,7 +41,8 @@ export const webApps: AppItemType[] = [
   },
   {
     title: "OS1",
-    description: "Landing page of an AI personal operating system.",
+    description:
+      "Landing page for an AI personal operating system, explaining how the OS works.",
     image: "/works/os1/logo.png",
     link: "https://www.os1ai.com",
     path: "https://www.os1ai.com",
