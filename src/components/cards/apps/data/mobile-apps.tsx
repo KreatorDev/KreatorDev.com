@@ -297,7 +297,7 @@ export const mobileApps: AppItemType[] = [
       "https://apps.apple.com/app/قصص-أطفال-مصورة-مغامرات-ممتعة/id1665629088",
     playstore:
       "https://play.google.com/store/apps/details?id=com.kreatordev.arabicstories",
-    path: "/work/arabic-stories",
+    path: "/arabic-stories",
     tags: ["Flutter", "Node.js", "AdMob", "RevenueCat"],
   },
   {
