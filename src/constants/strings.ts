@@ -1,14 +1,14 @@
-const author = "Ayoub Kremcht";
+const author = "JD O'Hea";
 const title = "KreatorDev";
-const username = "kreatordev";
-const linkedinUsername = "ayoub-kremcht";
-const host = "kreatordev.com";
+const username = "jdohea";
+const linkedinUsername = "jdohea";
+const host = "jdohea.com";
 const url = "https://" + host;
-const mail = "nowkreator@gmail.com";
+const mail = "me@jdohea.com";
 const description = `${author}. Explore my personal portfolio, services and blogs.`;
 const og = `${url}/og.png`;
 const shortAbout =
-  "A software developer from Morocco interested in building apps as solutions.";
+  "A Data Scientist/software Developer from Ireland focused on scalable infrastructure for now.";
 const about =
   "Currently interested on developing quality applications as solutions that effectively solve problems, rather than just providing solutions.";
 

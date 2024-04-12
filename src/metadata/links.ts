@@ -3,7 +3,7 @@ import { linkedinUsername, title, username } from "@/constants/strings";
 const linksMetadata = {
   x: "https://x.com/" + username,
   linkedin: "https://linkedin.com/in/" + linkedinUsername,
-  github: "https://github.com/" + username,
+  github: "https://github.com/KreatorDev/KreatorDev.com",
   instagram: "https://instagram.com/" + username,
   youtube: "https://youtube.com/@" + username,
 };

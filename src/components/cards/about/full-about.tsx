@@ -14,7 +14,7 @@ export default function FullAboutCard() {
           height={150}
         />
         <p className="text-xl font-bold py-4">
-          <a className="opacity-70">Hi, I{"'"}m Ayoub </a>👋
+          <a className="opacity-70">Hi, I{"'"}m JD </a>👋
         </p>
         <p className="opacity-95 text-3xl font-bold">
           Passionate about building{" "}
@@ -26,9 +26,12 @@ export default function FullAboutCard() {
         <p className="text-lg text-neutral-500 py-3">
           a{" "}
           <a className="font-semibold text-dark dark:text-light/90">
-            software developer
+            Data Scientist
           </a>{" "}
-          based in Morocco.
+          turned{" "}
+          <a className="font-semibold text-dark dark:text-light/90">
+             Software Engineer
+          </a>.
         </p>
         <p className="text-[17px] text-neutral-500 2xs:px-2 xs:px-5 leading-relaxed">
           {about}

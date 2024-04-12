@@ -15,7 +15,7 @@ export default function PreviewAboutCard({
     <div className={cardStyle + className}>
       <div className="flex flex-row w-full">
         <div className="flex flex-col flex-grow">
-          <CardTitle title="KREATORDEV" />
+          <CardTitle title="jdohea" />
           <p className="text-xl font-medium mt-4">Hi, I{"'"}m Ayoub 👋</p>
         </div>
         <div className="px-3 py-2 bg-teal-100/40 dark:bg-slate-500/20 rounded-full">
