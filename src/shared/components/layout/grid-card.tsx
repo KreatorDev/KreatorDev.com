@@ -20,7 +20,7 @@ function GridCard({
     <div className={cardStyle + className}>
       <CardTitle icon={icon} title={title} />
       <div className="h-5" />
-      <div className={"flex flex-wrap content-center gap-3.5 " + gridClassName}>
+      <div className={"flex flex-col items-center gap-3.5 " + gridClassName}>
         {children}
       </div>
       {footer}

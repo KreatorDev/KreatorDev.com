@@ -1,20 +1,11 @@
-## [Live version](https://kreatordev.com)
+### Hi there 👋 - I'm JD
 
-### About
-A personal website built using nextjs & tailwindcss.
+I was once an outgoing and sporty farmer from West Cork in rural Ireland, now transitioned to city life embracing the tech world and proudly identifying as a nerd.
 
-### Features
-- Simple design & focused content.
-- Responsive.
-- Dark mode support.
+- 👨‍🎓 Trained in ... Data Science, Machine Learning
+- 👨‍💻 Working on ... Infrastructure & Devops, Scalable Data & AI Products
+- 🌱 I’m currently learning ... Javascript & web dev fundamentals
+- 💬 Ask me about ... my failed & successful Startups & Scale ups
+- 📫 How to reach me: [LinkedIn](https://www.linkedin.com/in/jdohea/)
+- ⚡ Fun fact: ... I love business strategy
 
-### To-do (PRs are welcome)
-- [ ] blog section
-- [ ] sitemap & robots.txt
-
-### Notes
-#### - To make the contact page work
-- you need to add your [resend.com](https://resend.com) RESEND_KEY, SENDER_EMAIL,FORWARD_EMAIL to the `.env` file.
-- you need to add your [google recaptcha v3](https://www.google.com/recaptcha/admin/create) NEXT_PUBLIC_RECAPTCHA_SITE_KEY, RECAPTCHA_SECRET_KEY to the `.env` file.
-
-Feel free to use it (may God bless me), and contribute if you can.

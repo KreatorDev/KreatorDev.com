@@ -8,7 +8,7 @@ export default function About() {
     <div className="flex flex-col">
       <FullAboutCard />
       <GridCards className="pt-6">
-        <ExperiencesCard className="col-span-3 md:col-span-2" />
+        <ExperiencesCard className="col-span-3 md:col-span-4" />
         <LinksGridCard className="col-span-3 md:col-span-1" />
       </GridCards>
     </div>

@@ -1,4 +1,4 @@
-import { title } from "@/constants/strings";
+import { username } from "@/constants/strings";
 import ContactEmailTemplate from "@/shared/components/other/email-template";
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
@@ -19,7 +19,7 @@ export async function POST(request: Request) {
 
     const res = await resend.emails.send({
       subject: "Thank you for contacting me",
-      from: title + "<" + process.env.SENDER_EMAIL + ">",
+      from: username + "<" + process.env.SENDER_EMAIL + ">",
       to: [email],
       bcc: process.env.FORWARD_EMAIL,
       react: ContactEmailTemplate(data),

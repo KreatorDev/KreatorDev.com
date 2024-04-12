@@ -14,7 +14,7 @@ function GridCards({
       {title && <GridTitle title={title} />}
       <div
         className={
-          "grid grid-cols-3 justify-start items-start content-start overflow-hidden py-2 gap-6 " +
+          "grid grid-cols-5 justify-start items-start content-start overflow-hidden py-2 gap-6 " +
           className
         }
       >

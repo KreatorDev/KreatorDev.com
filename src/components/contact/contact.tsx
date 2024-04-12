@@ -13,7 +13,6 @@ import inputStyle from "@/shared/styles/input";
 import "@/shared/styles/input.css";
 import { useState } from "react";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
-import LinksGridCard from "../cards/links/links-grid";
 
 const getTextById = (id: string): string | undefined => {
   try {
@@ -158,7 +157,7 @@ export default function Contact() {
           {alertDialog.alert}
         </form>
         <div className="py-3" />
-        <LinksGridCard />
+
       </div>
     </>
   );

@@ -1,9 +1,9 @@
 import { uniqueTags } from "@/components/cards/about/experiences";
-import { author, shortAbout, title } from "@/constants/strings";
+import { author, shortAbout, username } from "@/constants/strings";
 import { Metadata } from "next";
 import rootMetadata from "./root";
 
-const aboutTitle = title + " | About";
+const aboutTitle = username + " | About";
 const aboutDescription = `${author}, ${shortAbout}`;
 
 const aboutMetadata: Metadata = {

@@ -1,8 +1,8 @@
-import { description, og, title } from "@/constants/strings";
+import { description, og, username } from "@/constants/strings";
 import { Metadata } from "next";
 import metadataBuilder from "./builder";
 
-const rootMetadata: Metadata = metadataBuilder(title, description, {
+const rootMetadata: Metadata = metadataBuilder(username, description, {
   keywords: [
     "Mobile",
     "Flutter",
