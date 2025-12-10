@@ -33,7 +33,7 @@ export async function POST(request: Request) {
       from: title + "<" + process.env.SENDER_EMAIL + ">",
       to: [email],
       bcc: process.env.FORWARD_EMAIL,
-      react: ContactEmailTemplate(data),
+      react: <ContactEmailTemplate {...data} />,
     });
     return NextResponse.json(res);
   } catch (error: any) {
