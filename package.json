@@ -13,7 +13,7 @@
     "next-themes": "^0.3.0",
     "react": "^18",
     "react-dom": "^18",
-    "react-google-recaptcha-v3": "^1.10.1",
+    "react-google-recaptcha-v3": "^1.11.0",
     "resend": "^3.2.0"
   },
   "devDependencies": {

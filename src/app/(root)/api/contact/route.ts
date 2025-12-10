@@ -10,11 +10,22 @@ export async function POST(request: Request) {
     const data = await request.json();
     const { name, email, message, recaptcha_token } = data;
     if (!name || !email || !message || !recaptcha_token)
-      return NextResponse.json({ error: "Invalid data, please try again!" });
+      throw "Invalid data, please try again!";
 
-    const isValidCaptcha = await verifyCaptcha(recaptcha_token);
-    if (!isValidCaptcha)
-      return NextResponse.json({ error: "Invalid captcha, please try again!" });
+    if (
+      name.trim().length > 300 ||
+      message.trim().length > 3000 ||
+      (message.length > 14 && !message.includes(" "))
+    )
+      throw "Invalid message content";
+
+    const captcha = await verifyCaptcha(recaptcha_token);
+    if (
+      !captcha?.success ||
+      captcha.score < 0.5 ||
+      captcha.action !== "contact"
+    )
+      throw "Invalid, please try again!";
     data.recaptcha_token = undefined;
 
     const res = await resend.emails.send({
@@ -31,12 +42,14 @@ export async function POST(request: Request) {
 }
 
 const verifyCaptcha = async (token: string) => {
-  const response = await fetch(
-    `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${token}`,
-    {
-      method: "POST",
-    }
-  );
-  const data = await response.json();
-  return data.success;
+  const res = await fetch("https://www.google.com/recaptcha/api/siteverify", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams({
+      secret: process.env.RECAPTCHA_SECRET_KEY!,
+      response: token,
+    }),
+  });
+
+  return res.json();
 };
