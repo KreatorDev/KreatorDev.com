@@ -28,15 +28,18 @@ export async function POST(request: Request) {
       throw "Invalid, please try again!";
     data.recaptcha_token = undefined;
 
+    const { renderToStaticMarkup } = await import("react-dom/server");
+    const emailHtml = renderToStaticMarkup(<ContactEmailTemplate {...data} />);
     const res = await resend.emails.send({
       subject: "Thank you for contacting me",
       from: title + "<" + process.env.SENDER_EMAIL + ">",
       to: [email],
       bcc: process.env.FORWARD_EMAIL,
-      react: <ContactEmailTemplate {...data} />,
+      html: emailHtml,
     });
-    return NextResponse.json(res);
+    return NextResponse.json(res.data);
   } catch (error: any) {
+    console.log("# contact error: ", error);
     return NextResponse.json(
       {
         error: typeof error === "string" ? error : error?.message ?? `${error}`,
