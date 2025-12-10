@@ -5,14 +5,14 @@ export function useAlert({
   Alert,
   iniAlert,
 }: {
-  Alert: any;
+  Alert: React.FC<AlertType>;
   iniAlert?: AlertType;
 }) {
-  const [alertType, setAlert] = useState(iniAlert);
+  const [alertType, setAlert] = useState<AlertType | undefined>(iniAlert);
   const timeout = useRef<NodeJS.Timeout>(undefined);
 
   const closeAlert = () => {
-    setAlert({});
+    setAlert(undefined);
     if (timeout.current) clearTimeout(timeout.current);
   };
 

@@ -36,8 +36,13 @@ export async function POST(request: Request) {
       react: ContactEmailTemplate(data),
     });
     return NextResponse.json(res);
-  } catch (error) {
-    return NextResponse.json({ error });
+  } catch (error: any) {
+    return NextResponse.json(
+      {
+        error: typeof error === "string" ? error : error?.message ?? `${error}`,
+      },
+      { status: 400 }
+    );
   }
 }
 

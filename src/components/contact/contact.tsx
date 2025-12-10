@@ -5,7 +5,7 @@ import MailIcon from "@/assets/icons/mail";
 import { mail } from "@/constants/strings";
 import { AlertDialog } from "@/shared/components/alerts/alert-dialog";
 import { useAlert } from "@/shared/components/alerts/alert-hook";
-import { AlertEnum } from "@/shared/components/alerts/types";
+import { AlertEnum, AlertType } from "@/shared/components/alerts/types";
 import CardTitle from "@/shared/components/titles/card-title";
 import { useLoadingButton } from "@/shared/hooks/loading-button-hook";
 import cardStyle from "@/shared/styles/card";
@@ -50,7 +50,7 @@ export default function Contact() {
                   };
               });
             } catch (error) {
-              alertDialog.setAlertWithTimeout(error as any);
+              alertDialog.setAlertWithTimeout(error as AlertType);
             }
           }}
           className={
@@ -96,7 +96,7 @@ export default function Contact() {
       if (!data.id)
         throw {
           title: "Failed to send message",
-          description: data.error ?? "Something went wrong",
+          description: `${data.error ?? "Something went wrong"}`,
           type: AlertEnum.ERROR,
         };
       setIsSent(true);
