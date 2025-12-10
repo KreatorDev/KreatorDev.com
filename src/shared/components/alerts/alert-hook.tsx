@@ -9,7 +9,7 @@ export function useAlert({
   iniAlert?: AlertType;
 }) {
   const [alertType, setAlert] = useState(iniAlert);
-  const timeout = useRef<NodeJS.Timeout>();
+  const timeout = useRef<NodeJS.Timeout>(undefined);
 
   const closeAlert = () => {
     setAlert({});

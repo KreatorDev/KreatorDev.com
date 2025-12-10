@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-function useDropDownMenu({ menu }: { menu?: JSX.Element }) {
+function useDropDownMenu({ menu }: { menu?: React.ReactNode }) {
   const [isOpen, setOpen] = useState(false);
   const dropdown = (
     <div className="absolute" role="menu">

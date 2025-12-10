@@ -4,7 +4,7 @@ type LoadingButtonType = {
   className?: string;
   loadingClassName?: string;
   loading?: boolean;
-  button?: JSX.Element;
+  button?: React.ReactNode;
 };
 
 export const useLoadingButton = ({
