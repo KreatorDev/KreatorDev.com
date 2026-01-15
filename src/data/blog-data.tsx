@@ -6,7 +6,7 @@ export const blogPosts: BlogPostType[] = [
     date: "January 15, 2026",
     author: "Ayoub Kremcht",
     coverImage: "/blog/year_in_review/2025_year_in_review.png",
-    content: "This is my 2025 Year in Review",
+    content: "This is my 2025 Year in Review.",
     writing: `
 <p>Hi! My name is Ayoub, and this is my 2025 year in review.</p>
 `,
