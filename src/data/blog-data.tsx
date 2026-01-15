@@ -8,7 +8,7 @@ export const blogPosts: BlogPostType[] = [
     coverImage: "/blog/year_in_review/2025_year_in_review.png",
     content: "This is my 2025 Year in Review",
     writing: `
-<p>Hi! My name is Ayoub, and this is my 2025 year in review. I traveled to <a href="https://en.wikipedia.org/wiki/Australia" target="_blank" rel="noopener noreferrer">Australia</a>.</p>
+<p>Hi! My name is Ayoub, and this is my 2025 year in review.</p>
 `,
     images: [
       {
