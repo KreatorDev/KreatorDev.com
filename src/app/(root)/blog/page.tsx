@@ -7,7 +7,7 @@ export default function Blog() {
       <div className={cardStyle}>
         <h1 className="text-2xl font-bold mb-4">Blog</h1>
         <p className="text-neutral-600 dark:text-neutral-300">
-          Say yes to things.
+          Welcome to my blog.
         </p>
       </div>
       <BlogList posts={blogPosts} />
