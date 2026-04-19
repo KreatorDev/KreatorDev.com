@@ -2,6 +2,18 @@ import AppItemType from "./app";
 
 export const mobileApps: AppItemType[] = [
   {
+    title: "Debt Payoff Pro",
+    description:
+      "Pay off debt faster with a simple, private tracker. Plan with snowball or avalanche, track progress, and stay motivated.",
+    image: "/works/debtpayoffpro/logo.png",
+    appstore: "https://apps.apple.com/app/id6762552664",
+    playstore:
+      "https://play.google.com/store/apps/details?id=com.kreatordev.debtpayoff",
+    path: "/debtpayoffpro",
+    tags: ["Flutter", "Supabase", "Helium", "Sentry"],
+    hasBorder: true,
+  },
+  {
     title: "GymTracker",
     description:
       "A gym workout app to track your workouts, offering features like workout plans, progress tracking, and more.",
