@@ -222,7 +222,7 @@ export default function Terms({ page }: { page: AppPageType }) {
         </p>
 
         <p className={boldStyle}>
-          These Terms of Use are effective as of 2024-01-20
+          These Terms of Use are effective as of 2026-04-19.
         </p>
 
         <p className={boldStyle}>Contact Us</p>

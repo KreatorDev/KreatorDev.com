@@ -194,7 +194,7 @@ export default function Privacy({ page }: { page: AppPageType }) {
           page.
         </p>
         <p className={normalStyle}>
-          This policy is effective as of {new Date(now).toLocaleString()}.
+          This policy is effective as of 2026-04-19.
         </p>
         <p className={boldStyle}>Contact Us</p>
         <span className={normalStyle}>
