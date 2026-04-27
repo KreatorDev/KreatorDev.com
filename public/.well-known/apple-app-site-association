@@ -11,6 +11,10 @@
       {
         "appID": "ZY25APARZZ.com.kreatordev.debtpayoff",
         "paths": ["/debtpayoffpro/*"]
+      },
+      {
+        "appID": "ZY25APARZZ.com.kreatordev.pantryinventorytracker",
+        "paths": ["/pantryinventorytracker/*"]
       }
     ]
   }

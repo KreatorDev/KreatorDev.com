@@ -2,6 +2,18 @@ import AppItemType from "./app";
 
 export const mobileApps: AppItemType[] = [
   {
+    title: "Pantry Inventory Tracker",
+    description:
+      "Track your pantry, fridge, and freezer. Scan barcodes, get expiry alerts, and share inventory with your household - across any phone or account.",
+    image: "/works/pantryinventorytracker/logo.png",
+    appstore: "https://apps.apple.com/app/id6764106691",
+    playstore:
+      "https://play.google.com/store/apps/details?id=com.kreatordev.pantryinventorytracker",
+    path: "/pantryinventorytracker",
+    tags: ["Flutter", "Supabase", "Sentry", "PostHog"],
+    hasBorder: true,
+  },
+  {
     title: "Debt Payoff Pro",
     description:
       "Pay off debt faster with a simple, private tracker. Plan with snowball or avalanche, track progress, and stay motivated.",
