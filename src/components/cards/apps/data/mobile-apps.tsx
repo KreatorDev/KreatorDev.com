@@ -2,6 +2,18 @@ import AppItemType from "./app";
 
 export const mobileApps: AppItemType[] = [
   {
+    title: "Fitly: Closet Organizer & Stylist",
+    description:
+      "The closet planner that actually lets you use it. Plan outfits, build your digital wardrobe, get smart styling — ad-free, no weekly traps.",
+    image: "/works/fitly/logo.png",
+    appstore: "https://apps.apple.com/app/id6765988647",
+    playstore:
+      "https://play.google.com/store/apps/details?id=com.kreatordev.fitly",
+    path: "/fitly",
+    tags: ["Flutter", "Supabase", "Helium", "Sentry", "PostHog"],
+    hasBorder: true,
+  },
+  {
     title: "Pantry Inventory Tracker",
     description:
       "Track your pantry, fridge, and freezer. Scan barcodes, get expiry alerts, and share inventory with your household - across any phone or account.",
