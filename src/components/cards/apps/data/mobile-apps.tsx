@@ -2,6 +2,18 @@ import AppItemType from "./app";
 
 export const mobileApps: AppItemType[] = [
   {
+    title: "DecorAI - Home Design Planner",
+    description:
+      "Edit one thing at a time. Tap to keep your floor, change your paint, swap your sofa — without AI moving your windows or deleting your walls.",
+    image: "/works/decorai/logo.png",
+    appstore: "https://apps.apple.com/app/id6767575202",
+    playstore:
+      "https://play.google.com/store/apps/details?id=com.kreatordev.decorai",
+    path: "/decorai",
+    tags: ["Flutter", "Supabase", "Helium", "Sentry", "PostHog"],
+    hasBorder: true,
+  },
+  {
     title: "Fitly: Closet Organizer & Stylist",
     description:
       "The closet planner that actually lets you use it. Plan outfits, build your digital wardrobe, get smart styling — ad-free, no weekly traps.",
