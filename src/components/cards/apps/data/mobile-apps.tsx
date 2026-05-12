@@ -2,7 +2,7 @@ import AppItemType from "./app";
 
 export const mobileApps: AppItemType[] = [
   {
-    title: "DecorAI - Home Design Planner",
+    title: "RoomTap - AI Home Room Design",
     description:
       "Edit one thing at a time. Tap to keep your floor, change your paint, swap your sofa — without AI moving your windows or deleting your walls.",
     image: "/works/decorai/logo.png",
