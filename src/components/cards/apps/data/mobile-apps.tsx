@@ -2,6 +2,18 @@ import AppItemType from "./app";
 
 export const mobileApps: AppItemType[] = [
   {
+    title: "Weather Outfit - What to Wear",
+    description:
+      "Know what to wear in seconds. Personalized outfit recommendations for the weather, calibrated to how you actually feel hot or cold. No ads.",
+    image: "/works/weatheroutfit/logo.png",
+    appstore: "https://apps.apple.com/app/id6769089874",
+    playstore:
+      "https://play.google.com/store/apps/details?id=com.kreatordev.weatheroutfit",
+    path: "/weatheroutfit",
+    tags: ["Flutter", "Supabase", "Helium", "Sentry", "PostHog"],
+    hasBorder: true,
+  },
+  {
     title: "RoomTap - AI Home Room Design",
     description:
       "Edit one thing at a time. Tap to keep your floor, change your paint, swap your sofa — without AI moving your windows or deleting your walls.",
