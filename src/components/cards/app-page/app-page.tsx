@@ -82,9 +82,13 @@ export default function AppPage({ page }: { page: AppPageType }) {
               Terms of Use
             </Link>
           )}
+          <div className="w-1 h-1 bg-neutral-500/80 rounded-full" />
+          <Link href="/contact" className={legalStyle}>
+            Contact Us
+          </Link>
         </div>
         <Link href={app.path} className={legalStyle}>
-          {app.title} © {new Date(now).getFullYear()}
+          © {new Date(now).getFullYear()}
         </Link>
       </div>
     </div>
@@ -94,7 +98,7 @@ export default function AppPage({ page }: { page: AppPageType }) {
 const widthFactor = (
   originalWidth: number,
   originalHeight: number,
-  newHeight: number
+  newHeight: number,
 ) => {
   return (newHeight * originalWidth) / originalHeight;
 };
