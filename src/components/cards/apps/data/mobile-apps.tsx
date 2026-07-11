@@ -2,6 +2,18 @@ import AppItemType from "./app";
 
 export const mobileApps: AppItemType[] = [
   {
+    title: "75 Soft Challenge Day Tracker",
+    description:
+      "Track your 75 Soft challenge free — water, workout, diet & reading in one beautiful daily checklist, with a forgiving streak and friends who can actually see your progress.",
+    image: "/works/soft75challenge/logo.png",
+    appstore: "https://apps.apple.com/app/id6789895923",
+    playstore:
+      "https://play.google.com/store/apps/details?id=com.kreatordev.soft75challenge",
+    path: "/soft75challenge",
+    tags: ["Flutter", "Supabase", "Helium", "Sentry", "PostHog"],
+    hasBorder: true,
+  },
+  {
     title: "Weather Outfit - What to Wear",
     description:
       "Know what to wear in seconds. Personalized outfit recommendations for the weather, calibrated to how you actually feel hot or cold. No ads.",
