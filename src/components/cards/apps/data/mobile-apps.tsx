@@ -2,6 +2,18 @@ import AppItemType from "./app";
 
 export const mobileApps: AppItemType[] = [
   {
+    title: "Siya9a Maroc",
+    description:
+      "Apprenez le code de la route marocain avec Siya9a Maroc.",
+    image: "/works/siya9a/logo.png",
+    appstore: "https://apps.apple.com/app/id6790593654",
+    playstore:
+      "https://play.google.com/store/apps/details?id=com.kreatordev.siya9a",
+    path: "/siya9a",
+    tags: ["Flutter", "Socket.IO", "Helium", "AdMob", "Sentry", "PostHog"],
+    hasBorder: true,
+  },
+  {
     title: "75 Soft Challenge Day Tracker",
     description:
       "Track your 75 Soft challenge free — water, workout, diet & reading in one beautiful daily checklist, with a forgiving streak and friends who can actually see your progress.",
