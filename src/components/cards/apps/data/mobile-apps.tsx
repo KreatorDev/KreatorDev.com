@@ -2,6 +2,18 @@ import AppItemType from "./app";
 
 export const mobileApps: AppItemType[] = [
   {
+    title: "HeightPal",
+    description:
+      "Predict your adult height free, track your family's growth on a warm chart, and build honest daily habits — no bait, no paywall tricks, cancel anytime.",
+    image: "/works/heightpal/logo.png",
+    appstore: "https://apps.apple.com/app/id6792290249",
+    playstore:
+      "https://play.google.com/store/apps/details?id=com.kreatordev.heightpal",
+    path: "/heightpal",
+    tags: ["Flutter", "Supabase", "Helium", "Sentry", "PostHog"],
+    hasBorder: true,
+  },
+  {
     title: "Siya9a Maroc",
     description:
       "Apprenez le code de la route marocain avec Siya9a Maroc.",
