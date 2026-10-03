@@ -1,20 +1,21 @@
-## [Live version](https://kreatordev.com)
+# KreatorDev
 
-### About
-A personal website built using nextjs & tailwindcss.
+Source for [kreatordev.com](https://kreatordev.com), the website of **KREATORDEV LLC**, an independent software company that designs, builds and publishes its own mobile apps for iOS and Android.
 
-### Features
-- Simple design & focused content.
-- Responsive.
-- Dark mode support.
+Built with Next.js and Tailwind CSS.
 
-### To-do (PRs are welcome)
-- [ ] blog section
-- [ ] sitemap & robots.txt
+## Development
 
-### Notes
-#### - To make the contact page work
-- you need to add your [resend.com](https://resend.com) RESEND_KEY, SENDER_EMAIL,FORWARD_EMAIL to the `.env` file.
-- you need to add your [google recaptcha v3](https://www.google.com/recaptcha/admin/create) NEXT_PUBLIC_RECAPTCHA_SITE_KEY, RECAPTCHA_SECRET_KEY to the `.env` file.
+```bash
+npm install
+npm run dev
+```
 
-Feel free to use it (may God bless me), and contribute if you can.
+## Environment
+
+The contact form needs these variables in `.env` (see `.env.example`):
+
+- `RESEND_KEY`, `SENDER_EMAIL`, `FORWARD_EMAIL` for [Resend](https://resend.com)
+- `NEXT_PUBLIC_RECAPTCHA_SITE_KEY`, `RECAPTCHA_SECRET_KEY` for [Google reCAPTCHA v3](https://www.google.com/recaptcha/admin/create)
+
+© KREATORDEV LLC. All rights reserved.

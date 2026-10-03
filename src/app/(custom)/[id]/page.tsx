@@ -1,10 +1,14 @@
 import AppPage from "@/components/cards/app-page/app-page";
 import getAppPage from "@/components/cards/app-page/data/get-object";
-import NotFound from "@/components/other/404";
+import { notFound } from "next/navigation";
 
-export default function AppPageEntry({ params }: { params: any }) {
-  const { id } = params;
+export default async function AppPageEntry({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const { id } = await params;
   const page = getAppPage(id);
-  if (!page) return <NotFound />;
+  if (!page) notFound();
   return <AppPage page={page} />;
 }

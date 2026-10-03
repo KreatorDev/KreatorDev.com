@@ -5,102 +5,103 @@ export const mobileApps: AppItemType[] = [
     title: "HeightPal",
     description:
       "Predict your adult height free, track your family's growth on a warm chart, and build honest daily habits — no bait, no paywall tricks, cancel anytime.",
+    category: "Health & Fitness",
     image: "/works/heightpal/logo.png",
     appstore: "https://apps.apple.com/app/id6792290249",
     playstore:
       "https://play.google.com/store/apps/details?id=com.kreatordev.heightpal",
     path: "/heightpal",
-    tags: ["Flutter", "Supabase", "Helium", "Sentry", "PostHog"],
     hasBorder: true,
   },
   {
     title: "Siya9a Maroc",
-    description:
-      "Apprenez le code de la route marocain avec Siya9a Maroc.",
+    description: "Apprenez le code de la route marocain avec Siya9a Maroc.",
+    category: "Education",
     image: "/works/siya9a/logo.png",
     appstore: "https://apps.apple.com/app/id6790593654",
     playstore:
       "https://play.google.com/store/apps/details?id=com.kreatordev.siya9a",
     path: "/siya9a",
-    tags: ["Flutter", "Socket.IO", "Helium", "AdMob", "Sentry", "PostHog"],
     hasBorder: true,
+    under_dev: true,
   },
   {
     title: "75 Soft Challenge Day Tracker",
     description:
       "Track your 75 Soft challenge free — water, workout, diet & reading in one beautiful daily checklist, with a forgiving streak and friends who can actually see your progress.",
+    category: "Health & Fitness",
     image: "/works/soft75challenge/logo.png",
     appstore: "https://apps.apple.com/app/id6789895923",
     playstore:
       "https://play.google.com/store/apps/details?id=com.kreatordev.soft75challenge",
     path: "/soft75challenge",
-    tags: ["Flutter", "Supabase", "Helium", "Sentry", "PostHog"],
     hasBorder: true,
   },
   {
     title: "Weather Outfit - What to Wear",
     description:
       "Know what to wear in seconds. Personalized outfit recommendations for the weather, calibrated to how you actually feel hot or cold. No ads.",
+    category: "Weather",
     image: "/works/weatheroutfit/logo.png",
     appstore: "https://apps.apple.com/app/id6769089874",
     playstore:
       "https://play.google.com/store/apps/details?id=com.kreatordev.weatheroutfit",
     path: "/weatheroutfit",
-    tags: ["Flutter", "Supabase", "Helium", "Sentry", "PostHog"],
     hasBorder: true,
   },
   {
     title: "RoomTap - AI Home Room Design",
     description:
       "Edit one thing at a time. Tap to keep your floor, change your paint, swap your sofa — without AI moving your windows or deleting your walls.",
+    category: "Graphics & Design",
     image: "/works/decorai/logo.png",
     appstore: "https://apps.apple.com/app/id6767575202",
     playstore:
       "https://play.google.com/store/apps/details?id=com.kreatordev.decorai",
     path: "/decorai",
-    tags: ["Flutter", "Supabase", "Helium", "Sentry", "PostHog"],
     hasBorder: true,
   },
   {
     title: "Fitly: Closet Organizer & Stylist",
     description:
       "The closet planner that actually lets you use it. Plan outfits, build your digital wardrobe, get smart styling — ad-free, no weekly traps.",
+    category: "Lifestyle",
     image: "/works/fitly/logo.png",
     appstore: "https://apps.apple.com/app/id6765988647",
     playstore:
       "https://play.google.com/store/apps/details?id=com.kreatordev.fitly",
     path: "/fitly",
-    tags: ["Flutter", "Supabase", "Helium", "Sentry", "PostHog"],
     hasBorder: true,
   },
   {
     title: "Pantry Inventory Tracker",
     description:
       "Track your pantry, fridge, and freezer. Scan barcodes, get expiry alerts, and share inventory with your household - across any phone or account.",
+    category: "Food & Drink",
     image: "/works/pantryinventorytracker/logo.png",
     appstore: "https://apps.apple.com/app/id6764106691",
     playstore:
       "https://play.google.com/store/apps/details?id=com.kreatordev.pantryinventorytracker",
     path: "/pantryinventorytracker",
-    tags: ["Flutter", "Supabase", "Sentry", "PostHog"],
     hasBorder: true,
   },
   {
     title: "Debt Payoff Pro",
     description:
       "Pay off debt faster with a simple, private tracker. Plan with snowball or avalanche, track progress, and stay motivated.",
+    category: "Finance",
     image: "/works/debtpayoffpro/logo.png",
     appstore: "https://apps.apple.com/app/id6762552664",
     playstore:
       "https://play.google.com/store/apps/details?id=com.kreatordev.debtpayoff",
     path: "/debtpayoffpro",
-    tags: ["Flutter", "Supabase", "Helium", "Sentry"],
     hasBorder: true,
   },
   {
     title: "GymTracker",
     description:
       "A gym workout app to track your workouts, offering features like workout plans, progress tracking, and more.",
+    category: "Health & Fitness",
     icon: "/works/gymtracker/logo.ico",
     image: "/works/gymtracker/logo.jpg",
     appstore: "https://apps.apple.com/app/id6476830400",
@@ -123,288 +124,55 @@ export const mobileApps: AppItemType[] = [
       "gym tracker",
       "gym workout",
     ],
-    tags: ["Flutter", "AdMob", "RevenueCat", "Localization"],
     hasBorder: true,
   },
   {
     title: "Radio Mobile",
     description:
       "A radio app to listen or add any radio stations, offering features like search, favorites, sleep timer, song recognition.",
+    category: "Music",
     icon: "/works/radioclub/logo.ico",
     image: "/works/radioclub/logo.jpg",
     appstore: "https://apps.apple.com/app/id1634077380",
     playstore: "https://play.google.com/store/apps/details?id=vip.radioclub",
     path: "/radio",
     keywords: [
-      "gym",
-      "workout",
-      "fitness",
-      "bodybuilding",
-      "exercise",
-      "training",
-      "tracker",
-      "weight",
-      "lifting",
-      "muscle",
-      "strength",
-      "gymtracker",
-      "gym tracker",
-      "gym workout",
+      "radio",
+      "fm radio",
+      "online radio",
+      "live radio",
+      "radio stations",
+      "music",
+      "sleep timer",
+      "song recognition",
     ],
-    tags: [
-      "Flutter",
-      "Firebase",
-      "Node.js",
-      "Docker",
-      "AdMob",
-      "RevenueCat",
-      "Localization",
-    ],
-    hasBorder: true,
-  },
-  {
-    title: "nosugar",
-    description:
-      "Keto diet tracker for a sugar-free lifestyle providing AI-powered keto menu and food barcode scanners.",
-    image: "/works/nosugar/logo.png",
-    appstore: "https://apps.apple.com/app/id6477765406",
-    path: "/work/nosugar-mobile",
-    tags: ["Flutter", "Node.js", "LLM", "RevenueCat"],
-  },
-  {
-    title: "Voice chat AI",
-    description:
-      "Create AI characters with voice replies, experience the magic of AI as characters respond with realistic voice messages.",
-    image: "/works/voice-chat/logo.png",
-    appstore: "https://apps.apple.com/app/id6478330374",
-    path: "/work/voice-chat",
-    tags: ["Flutter", "Node.js", "LLM", "RevenueCat"],
-  },
-  {
-    title: "zima",
-    description:
-      "AI health coach that provides personalized AI tips, reminders, and advice for a healthier you.",
-    image: "/works/zima/logo.png",
-    appstore: "https://apps.apple.com/app/id6477898586",
-    path: "/work/zima-mobile",
-    tags: ["Flutter", "Node.js", "LLM", "RevenueCat"],
-  },
-  {
-    title: "Snapsaga",
-    description:
-      "AI chat stories app to play or create AI characters and simulate their own persona in those stories.",
-    image: "/works/snapsaga/logo.png",
-    appstore:
-      "https://apps.apple.com/app/snapsaga-simulate-a-new-world/id6449471782",
-    path: "/work/snapsaga",
-    tags: ["Flutter", "Firebase", "Node.js", "PlayHT", "LLM", "RevenueCat"],
-  },
-  {
-    title: "Ask Nova",
-    description:
-      "Voice AI assistant app to answer your questions, designed to save time and provide quick answers.",
-    image: "/works/ask-nova/logo.png",
-    appstore: "https://apps.apple.com/app/ask-nova-ai-assistant/id1672860414",
-    path: "/work/ask-nova",
-    tags: ["Flutter", "Google STT", "OpenAI", "Whisper"],
-  },
-  {
-    title: "NPC",
-    description:
-      "AI chat games that brings you exciting AI games every day, designed to challenge strategic thinking and negotiating skills.",
-    image: "/works/npc/logo.png",
-    appstore: "https://apps.apple.com/app/npc-ai-chat-games/id6446919923",
-    path: "/work/npc",
-    tags: ["Flutter", "Firebase", "OpenAI"],
-  },
-  {
-    title: "Sebmita",
-    description:
-      "A language learning app to learn and practice speaking, reading, listening and writing african languages.",
-    image: "/works/sebmita/logo.png",
-    appstore: "https://apps.apple.com/app/sebmita/id1567445203",
-    playstore:
-      "https://play.google.com/store/apps/details?id=com.sebmita.sebmita",
-    path: "/work/sebmita",
-    tags: ["Flutter", "Firebase", "Localization", "AdMob", "RevenueCat"],
-    hasBorder: true,
-  },
-  {
-    title: "Daedalus Wallet",
-    description:
-      "A cryptocurrency wallet app to create a secure crypto wallet, and to send, receive, and manage cryptocurrency assets.",
-    image: "/works/daedalus-wallet/logo.png",
-    appstore: "https://apps.apple.com/app/daedalus-wallet-mobile/id6443645636",
-    path: "/work/daedalus-wallet",
-    tags: ["Flutter", "Firebase", "Node.js", "AdMob", "RevenueCat"],
-    hasBorder: true,
-  },
-  {
-    title: "Daedalus",
-    description:
-      "An investment & portfolio tracking app to track your stocks, crypto, NFT assets, and manage your personal portfolio.",
-    image: "/works/daedalus/logo.png",
-    playstore: "https://play.google.com/store/apps/details?id=com.daedalusfi",
-    path: "/work/daedalus",
-    tags: ["Flutter", "Node.js", "Alpaca", "Plaid", "AdMob", "RevenueCat"],
-    hasBorder: true,
-  },
-  {
-    title: "Dreamshow",
-    description:
-      "AI chatbot app where you can find many AI characters, and chat with them.",
-    image: "/works/dreamshow/mobile.png",
-    appstore: "https://apps.apple.com/app/dreamshow-ai/id1671059685",
-    path: "/work/dreamshow",
-    tags: ["Flutter", "Firebase", "Node.js", "RunPod.io", "LLM"],
-    hasBorder: true,
-  },
-  {
-    title: "Creator Performance Marketing",
-    description:
-      "An deals app to help TikTok creators find the best deals, and to help brands find the best creators.",
-    appstore:
-      "https://apps.apple.com/app/creator-performance-marketing/id1619726760",
-    image: "/works/cpm/logo.jpg",
-    path: "/work/cpm",
-    tags: ["Flutter", "Firebase", "Node.js"],
-    hasBorder: true,
-  },
-  {
-    title: "Zoom Tap Animation",
-    description:
-      "A zoom animation package to zoom in/out any widget, and create a zoom animation effect.",
-    image: "/works/pub-dev/logo.png",
-    github: "https://github.com/KreatorDev/zoom_tap_animation",
-    pub: "https://pub.dev/packages/zoom_tap_animation",
-    path: "/work/zoom-tap-animation",
-    tags: ["Flutter"],
-    hasBorder: true,
-  },
-  {
-    title: "Finwise",
-    description:
-      "AI personal financial assistant app to manage your money, get AI insights about your finances.",
-    image: "/works/finwise/logo.jpg",
-    appstore: "https://apps.apple.com/app/finwise/id6446466730",
-    path: "/work/finwise",
-    tags: ["Flutter", "Firebase", "Plaid", "LLM"],
-    hasBorder: true,
-  },
-  {
-    title: "WDYT",
-    description:
-      "Anonymous question & answer app to get feedback from your followers on social media.",
-    image: "/works/wdyt/logo.png",
-    appstore: "https://apps.apple.com/app/wdyt-anonymous-q-a/id6449153741",
-    path: "/work/wdyt",
-    tags: ["Flutter", "Firebase", "Node.js"],
-  },
-  {
-    title: "Songbird",
-    description:
-      "A music rooms to listen, discover, and share music with other people, and to create rooms to listen to music together.",
-    image: "/works/songbird/logo.png",
-    appstore:
-      "https://apps.apple.com/app/songbird-listen-together/id1572218061",
-    path: "/work/songbird",
-    tags: ["Flutter", "Firebase", "Node.js"],
-  },
-  {
-    title: "UniTrade",
-    description:
-      "A college marketplace app to buy and sell items with other students, also to services like design, tutoring, and more.",
-    image: "/works/unitrade/logo.png",
-    appstore: "https://apps.apple.com/app/unitrade/id1587195199",
-    path: "/work/unitrade",
-    tags: ["Flutter", "Firebase"],
-    hasBorder: true,
-  },
-  {
-    title: "Nonga",
-    description:
-      "A dating app to meet new people, date, and find meaningful connections with people who share similar cultural values.",
-    image: "/works/nonga/logo.png",
-    appstore: "https://apps.apple.com/app/nonga/id1549916484",
-    playstore:
-      "https://play.google.com/store/apps/details?id=com.tengsoba.nonga",
-    path: "/work/nonga",
-    tags: ["Flutter", "Firebase", "Localization", "AdMob", "RevenueCat"],
-  },
-  {
-    title: "DormLive",
-    description:
-      "A hang-out college app to help students find, meet new people, and create audio rooms, and chat with friends.",
-    image: "/works/dormlive/logo.png",
-    appstore: "https://apps.apple.com/app/dormlive/id1553996014",
-    path: "/work/dormlive",
-    tags: ["Flutter", "Firebase"],
-  },
-  {
-    title: "Vocado",
-    description:
-      "A voice notes app to record, transcribe, and save voice notes, and to share them with friends.",
-    image: "/works/vocado/logo.png",
-    appstore: "https://apps.apple.com/app/vocado/id1552999113",
-    path: "/work/vocado",
-    tags: ["Flutter", "Firebase", "Google STT"],
-    hasBorder: true,
-  },
-  {
-    title: "Kibbit",
-    description:
-      "A college social app to help students know each other by asking and answering questions anonymously.",
-    appstore: "https://apps.apple.com/app/kibbit-campus-ama/id1547609144",
-    image: "/works/kibbit/logo.png",
-    path: "/work/kibbit",
-    tags: ["Flutter", "Firebase"],
     hasBorder: true,
   },
   {
     title: "Simple Workout",
     description:
       "A workout app to do exercise at home, offering quick and easy workouts, with daily reminder.",
+    category: "Health & Fitness",
     image: "/works/simple-workout/logo.png",
-    hasBorder: true,
-    appstore:
-      "https://apps.apple.com/app/simple-workout-home-exercises/id1668371203",
+    appstore: "https://apps.apple.com/app/id1668371203",
     playstore:
       "https://play.google.com/store/apps/details?id=com.kreatordev.bodyexercises",
-    path: "/work/simple-workout",
-    tags: ["Flutter", "AdMob"],
-  },
-  {
-    title: "Voz",
-    description:
-      "A voice chat app to send voice messages, and to chat with friends, designed to save time and have fun.",
-    image: "/works/voz/logo.png",
-    playstore:
-      "https://play.google.com/store/apps/details?id=com.kreatordev.avc",
+    path: "/simple-workout",
     hasBorder: true,
-    path: "/work/voz",
-    tags: ["Flutter", "Firebase", "Google STT"],
   },
   {
     title: "Children Stories",
     description:
       "A stories app that provides a collection of children short stories, with beautiful illustrations.",
+    category: "Entertainment",
     image: "/works/arabic-stories/logo.jpg",
-    appstore:
-      "https://apps.apple.com/app/قصص-أطفال-مصورة-مغامرات-ممتعة/id1665629088",
+    appstore: "https://apps.apple.com/app/id1665629088",
     playstore:
       "https://play.google.com/store/apps/details?id=com.kreatordev.arabicstories",
     path: "/arabic-stories",
-    tags: ["Flutter", "Node.js", "AdMob", "RevenueCat"],
-  },
-  {
-    title: "Tamara Shop",
-    description:
-      "A skate & surf shop app to buy skateboards, surfboards, accessories, and to manage orders.",
-    image: "/works/tamara/logo.png",
-    playstore:
-      "https://play.google.com/store/apps/details?id=com.kreatordev.tamarashop",
-    path: "/work/tamara",
-    tags: ["Flutter", "Firebase"],
-    hasBorder: true,
   },
 ];
+
+export const liveApps = mobileApps.filter((app) => !app.under_dev);
+
+export const underDevApps = mobileApps.filter((app) => app.under_dev);

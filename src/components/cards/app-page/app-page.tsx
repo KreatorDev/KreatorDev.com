@@ -1,6 +1,7 @@
 "use client";
 
 import ChevronLeftIcon from "@/assets/icons/chevron-left";
+import { legalName } from "@/constants/strings";
 import cardStyle from "@/shared/styles/card";
 import Image from "next/image";
 import Link from "next/link";
@@ -11,7 +12,7 @@ export default function AppPage({ page }: { page: AppPageType }) {
   const app = page.app;
   if (!app) return;
 
-  const legalStyle = "text-sm opacity-30 hover:opacity-100 hover:underline p-2";
+  const legalStyle = "text-sm opacity-50 hover:opacity-100 hover:underline p-2";
   const height = 121;
   const style = "hover:opacity-50 h-[60px]";
   const width = widthFactor(396, 121, 60);
@@ -21,7 +22,7 @@ export default function AppPage({ page }: { page: AppPageType }) {
       <div className="w-full flex flex-row items-center">
         <Link
           href="/"
-          className="flex flex-row justify-start items-center gap-2 opacity-30 hover:opacity-100 hover:underline px-2"
+          className="flex flex-row justify-start items-center gap-2 opacity-50 hover:opacity-100 hover:underline px-2"
         >
           <div className="hover:animate-scale">
             <ChevronLeftIcon className="w-6 h-6" />
@@ -44,7 +45,15 @@ export default function AppPage({ page }: { page: AppPageType }) {
           height={140}
         />
         <div className="h-1" />
-        <p className="text-2xl font-bold">{app.title}</p>
+        <div className="flex flex-col gap-1">
+          <p className="text-2xl font-bold">{app.title}</p>
+          <Link
+            href="/company"
+            className="text-sm text-neutral-500 hover:underline"
+          >
+            by {legalName}
+          </Link>
+        </div>
         <p className="text-xl text-neutral-500 2xs:px-2 xs:px-5 leading-relaxed">
           {app.description}
         </p>
@@ -88,7 +97,7 @@ export default function AppPage({ page }: { page: AppPageType }) {
           </Link>
         </div>
         <Link href={app.path} className={legalStyle}>
-          © {new Date(now).getFullYear()}
+          © {new Date(now).getFullYear()} {legalName}
         </Link>
       </div>
     </div>

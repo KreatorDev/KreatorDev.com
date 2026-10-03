@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="512" height="512" role="img" aria-labelledby="title">
+  <title id="title">KreatorDev</title>
+  <defs>
+    <mask id="k-cutout" maskUnits="userSpaceOnUse" x="0" y="0" width="512" height="512">
+      <rect width="512" height="512" fill="#FFFFFF"/>
+      <g transform="translate(60 60) scale(1.1) translate(-60 -60)">
+        <rect x="41" y="38" width="12" height="45" rx="6" fill="#000000"/>
+        <path d="M74 44 56 60 74 76" fill="none" stroke="#000000" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+    </mask>
+  </defs>
+  <g fill="#FFFFFF" mask="url(#k-cutout)">
+    <rect x="22" y="22" width="76" height="76" rx="17"/>
+    <rect x="22" y="22" width="76" height="76" rx="17" transform="rotate(45 60 60)"/>
+  </g>
+</svg>

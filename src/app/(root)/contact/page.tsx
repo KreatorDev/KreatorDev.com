@@ -1,13 +1,13 @@
 import Contact from "@/components/contact/contact";
-import contactMetadata from "@/metadata/contact";
-import ReCaptchaWrapper from "@/shared/components/other/recaptcha-wrapper";
+import { legalName } from "@/constants/strings";
+import { pageMetadata } from "@/metadata/builder";
 
-export const metadata = contactMetadata;
+export const metadata = pageMetadata(
+  "Contact",
+  `Contact ${legalName} for app support, partnerships and press.`,
+  "/contact"
+);
 
 export default function ContactEntry() {
-  return (
-    <ReCaptchaWrapper>
-      <Contact />
-    </ReCaptchaWrapper>
-  );
+  return <Contact />;
 }

@@ -15,7 +15,7 @@ export default function ContactEmailTemplate({ name, message }: any) {
             </h1>
 
             <p style={{ fontSize: "15px" }}>
-              I have successfully received your message:
+              We have received your message:
             </p>
 
             <p
@@ -30,8 +30,8 @@ export default function ContactEmailTemplate({ name, message }: any) {
             </p>
 
             <p style={{ fontSize: "14px", fontWeight: 600, marginTop: "16px" }}>
-              Thank you for reaching out to me! I will get back to you as soon
-              as possible.
+              Thank you for contacting KreatorDev. We will get back to you as
+              soon as possible.
             </p>
           </td>
         </tr>

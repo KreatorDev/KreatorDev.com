@@ -1,10 +1,28 @@
 "use client";
 
 import ChevronLeftIcon from "@/assets/icons/chevron-left";
+import { fullAddress, legalName, supportEmail } from "@/constants/strings";
 import cardStyle from "@/shared/styles/card";
 import Link from "next/link";
 import ThemeSwitcher from "../theme/theme-toggle";
 import AppPageType from "./data/page";
+import ThirdPartyList from "./third-party-list";
+
+const collectedData = [
+  "Account details, such as your name and email address",
+  "Content you create or add, such as entries, photos, notes or lists",
+  "Details you enter about yourself or family members, such as age, height, or health and fitness information",
+  "Purchase and subscription status. Payments are handled by Apple and Google, and we never receive your card details",
+  "Device and usage information, such as device model, operating system, app version, crash reports and feature usage",
+  "Advertising identifiers, in apps that show ads",
+];
+
+const childrenCommitments = [
+  "We collect only the information needed for the app to work.",
+  "We do not use children’s personal information for personalized or behavioral advertising.",
+  "Information a parent or guardian enters about a child, such as age or height, stays under the parent’s control and can be deleted at any time.",
+  "We follow applicable children’s privacy laws, such as COPPA and the GDPR, and the App Store and Google Play rules for apps used by children.",
+];
 
 export default function Privacy({ page }: { page: AppPageType }) {
   const app = page.app;
@@ -58,63 +76,33 @@ export default function Privacy({ page }: { page: AppPageType }) {
         <p className={boldStyle}>Information Collection and Use</p>
         <p className={normalStyle}>
           For a better experience, while using our Service, we may require you
-          to provide us with certain personally identifiable information,
-          including but not limited to Email, Name, Phone number, Address. The
-          information that we request will be retained by us and used as
-          described in this privacy policy.
+          to provide us with certain personally identifiable information.
+          Depending on the app and the features you use, this may include:
         </p>
+        <ul className={normalStyle + " list-disc list-inside flex flex-col gap-1"}>
+          {collectedData.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
         <p className={normalStyle}>
-          The app does use third party services that may collect information
-          used to identify you.
+          The information that we request will be retained by us and used as
+          described in this privacy policy. We do not sell your personal
+          information.
         </p>
-        {page.privacyOptions?.thirdParty && (
-          <p className={normalStyle}>
-            Link to privacy policy of third party service providers used by the
-            app
-          </p>
-        )}
-        {page.privacyOptions?.thirdParty && (
-          <p className={normalStyle}>
-            <ul className="list-disc list-inside">
-              <li>
-                <a
-                  href="https://www.google.com/policies/privacy/"
-                  target="_blank"
-                  className="hover:opacity-50"
-                >
-                  Google Play Services
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://firebase.google.com/policies/analytics"
-                  target="_blank"
-                  className="hover:opacity-50"
-                >
-                  Google Analytics
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.facebook.com/about/privacy/update/printable"
-                  target="_blank"
-                  className="hover:opacity-50"
-                >
-                  Facebook
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.revenuecat.com/privacy"
-                  target="_blank"
-                  className="hover:opacity-50"
-                >
-                  RevenueCat
-                </a>
-              </li>
-            </ul>
-          </p>
-        )}
+        <p className={boldStyle}>Third-Party Services</p>
+        <p className={normalStyle}>
+          Depending on the app and the features you use, the app may rely on
+          the third-party services below. They may collect information used to
+          identify you, and process it on our behalf or under their own privacy
+          policies:
+        </p>
+        <ThirdPartyList link="privacy" className={normalStyle} />
+        <p className={normalStyle}>
+          Features powered by artificial intelligence may send the content you
+          choose to submit, such as a photo or text, to AI service providers to
+          generate a result. We share this content only to provide the feature
+          you requested.
+        </p>
         <p className={boldStyle}>Log Data</p>
         <p className={normalStyle}>
           We want to inform you that whenever you use our Service, in a case of
@@ -145,14 +133,12 @@ export default function Privacy({ page }: { page: AppPageType }) {
           We may employ third-party companies and individuals due to the
           following reasons:
         </p>
-        <p className={normalStyle}>
-          <ul className="list-disc list-inside">
-            <li>To facilitate our Service;</li>
-            <li>To provide the Service on our behalf;</li>
-            <li>To perform Service-related services; or</li>
-            <li>To assist us in analyzing how our Service is used.</li>
-          </ul>
-        </p>
+        <ul className={normalStyle + " list-disc list-inside"}>
+          <li>To facilitate our Service;</li>
+          <li>To provide the Service on our behalf;</li>
+          <li>To perform Service-related services; or</li>
+          <li>To assist us in analyzing how our Service is used.</li>
+        </ul>
         <p className={normalStyle}>
           We want to inform users of this Service that these third parties have
           access to your Personal Information. The reason is to perform the
@@ -178,13 +164,41 @@ export default function Privacy({ page }: { page: AppPageType }) {
         </p>
         <p className={boldStyle}>Children’s Privacy</p>
         <p className={normalStyle}>
-          These Services do not address anyone under the age of 13. We do not
-          knowingly collect personally identifiable information from children
-          under 13. In the case we discover that a child under 13 has provided
-          us with personal information, we immediately delete this from our
-          servers. If you are a parent or guardian and you are aware that your
-          child has provided us with personal information, please contact us so
-          that we will be able to do the necessary actions.
+          Unless an app’s store listing says otherwise, our apps are intended
+          for a general audience and are not directed to children under 13, or
+          the minimum age required in your country. We do not knowingly collect
+          personal information from children without verifiable parental
+          consent.
+        </p>
+        <p className={normalStyle}>
+          Some apps offer content for children or features used by families. In
+          those apps:
+        </p>
+        <ul className={normalStyle + " list-disc list-inside flex flex-col gap-1"}>
+          {childrenCommitments.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+        <p className={normalStyle}>
+          If you are a parent or guardian and believe your child has provided
+          us with personal information, email{" "}
+          <a
+            className={"!underline !font-semibold"}
+            href={"mailto:" + supportEmail}
+          >
+            {supportEmail}
+          </a>{" "}
+          and we will delete it.
+        </p>
+        <p className={boldStyle}>Your Choices and Account Deletion</p>
+        <p className={normalStyle}>
+          You can ask us to access, correct or delete your personal information
+          at any time. To delete your account and its data, follow the steps on
+          our{" "}
+          <Link className={"!underline !font-semibold"} href="/account-deletion">
+            Account Deletion
+          </Link>{" "}
+          page.
         </p>
         <p className={boldStyle}>Changes to This Privacy Policy</p>
         <p className={normalStyle}>
@@ -194,12 +208,19 @@ export default function Privacy({ page }: { page: AppPageType }) {
           page.
         </p>
         <p className={normalStyle}>
-          This policy is effective as of 2026-04-19.
+          This policy is effective as of 2026-10-03.
         </p>
         <p className={boldStyle}>Contact Us</p>
         <span className={normalStyle}>
-          If you have any questions or suggestions about our Privacy Policy, do
-          not hesitate to{" "}
+          {app.title} is published by {legalName}, {fullAddress}. If you
+          have any questions or suggestions about our Privacy Policy, email{" "}
+          <a
+            className={"!underline !font-semibold"}
+            href={"mailto:" + supportEmail}
+          >
+            {supportEmail}
+          </a>{" "}
+          or{" "}
           <a className={"!underline !font-semibold"} href="/contact">
             contact us
           </a>
@@ -209,7 +230,7 @@ export default function Privacy({ page }: { page: AppPageType }) {
       <div className="h-12" />
       <div className="flex flex-row w-full justify-end items-center gap-4 px-2">
         <Link href={app.path} className={legalStyle}>
-          {app.title} © {new Date(now).getFullYear()}
+          {app.title} © {new Date(now).getFullYear()} {legalName}
         </Link>
       </div>
     </div>

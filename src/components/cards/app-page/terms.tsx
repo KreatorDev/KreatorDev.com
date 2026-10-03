@@ -1,10 +1,12 @@
 "use client";
 
 import ChevronLeftIcon from "@/assets/icons/chevron-left";
+import { fullAddress, legalName, supportEmail } from "@/constants/strings";
 import cardStyle from "@/shared/styles/card";
 import Link from "next/link";
 import ThemeSwitcher from "../theme/theme-toggle";
 import AppPageType from "./data/page";
+import ThirdPartyList from "./third-party-list";
 
 export default function Terms({ page }: { page: AppPageType }) {
   const app = page.app;
@@ -60,44 +62,10 @@ export default function Terms({ page }: { page: AppPageType }) {
         </p>
 
         <p className={normalStyle}>
-          The app does use third-party services that declare their Terms of Use.
+          Depending on the app and the features you use, the app may rely on
+          third-party services that have their own terms of use:
         </p>
-
-        <p className={normalStyle}>
-          <b>
-            Link to Terms of Use of third-party service providers used by the
-            app
-          </b>
-        </p>
-        <ul className={normalStyle + " list-disc list-inside"}>
-          <li>
-            <a
-              href="https://www.google.com/policies/privacy/"
-              target="_blank"
-              className="hover:opacity-50"
-            >
-              Google Play Services
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.facebook.com/about/privacy/update/printable"
-              target="_blank"
-              className="hover:opacity-50"
-            >
-              Facebook
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.revenuecat.com/privacy"
-              target="_blank"
-              className="hover:opacity-50"
-            >
-              RevenueCat
-            </a>
-          </li>
-        </ul>
+        <ThirdPartyList link="terms" className={normalStyle} />
 
         <p className={normalStyle}>
           You should be aware that there are certain things that {app.title}{" "}
@@ -222,13 +190,20 @@ export default function Terms({ page }: { page: AppPageType }) {
         </p>
 
         <p className={boldStyle}>
-          These Terms of Use are effective as of 2026-04-19.
+          These Terms of Use are effective as of 2026-10-03.
         </p>
 
         <p className={boldStyle}>Contact Us</p>
         <span className={normalStyle}>
-          If you have any questions or suggestions about our Terms of Use, do
-          not hesitate to{" "}
+          {app.title} is published by {legalName}, {fullAddress}. If you have
+          any questions or suggestions about our Terms of Use, email{" "}
+          <a
+            className={"!underline !font-semibold"}
+            href={"mailto:" + supportEmail}
+          >
+            {supportEmail}
+          </a>{" "}
+          or{" "}
           <a className={"!underline !font-semibold"} href="/contact">
             contact us
           </a>
@@ -238,7 +213,7 @@ export default function Terms({ page }: { page: AppPageType }) {
       <div className="h-12" />
       <div className="flex flex-row w-full justify-end items-center gap-4 px-2">
         <Link href={app.path} className={legalStyle}>
-          {app.title} © {new Date(now).getFullYear()}
+          {app.title} © {new Date(now).getFullYear()} {legalName}
         </Link>
       </div>
     </div>

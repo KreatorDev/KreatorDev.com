@@ -1,134 +1,63 @@
-"use client";
-
-import { githubIcon } from "@/assets/icons/all-social";
 import AppstoreIcon from "@/assets/icons/appstore";
 import GooglePlayIcon from "@/assets/icons/google-play";
-import PubDevIcon from "@/assets/icons/pub-dev";
-import tagStyle from "@/shared/styles/tag";
-import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
-import linkByTag from "./data/link-by-tag";
+import AppIcon from "./app-icon";
+import AppItemType from "./data/app";
 
-function AppItem({
-  card,
-  className,
-  hideBottomBorder = false,
-  hideTags = false,
-  hideLearnMore = false,
-}: {
-  card: any;
-  className?: string;
-  hideTags?: boolean;
-  hideBottomBorder?: boolean;
-  hideLearnMore?: boolean;
-}) {
-  const router = useRouter();
+const pillStyle =
+  "inline-flex items-center gap-2 rounded-full border border-neutral-500/20 px-3.5 py-1.5 text-[13px] font-medium transition hover:border-neutral-500/50 hover:bg-neutral-500/5";
+
+function AppItem({ app }: { app: AppItemType }) {
   return (
-    <div
-      key={card.title}
-      className={
-        "flex flex-col gap-2 " +
-        (hideBottomBorder ? "" : "border-b border-neutral-500/10 pb-7") +
-        " " +
-        className
-      }
-    >
-      <div className="flex flex-col gap-1.5">
-        <div className="flex flex-wrap 2.5xs:!flex-nowrap !flex-row items-start gap-4 underline-offset-2">
-          <Image
-            onClick={!!card.path ? () => router.push(card.path) : undefined}
-            src={card.image}
-            alt={card.title}
-            width={200}
-            height={200}
-            className={
-              "w-18 h-18 xs:w-22 xs:h-22 rounded-[18px] bg-neutral-500/10 " +
-              (card.hasBorder ? " border border-neutral-500/20" : "") +
-              (!!card.path ? " hover:animate-scale cursor-pointer" : "") +
-              " " +
-              card.imageClassName
-            }
-          />
-          <div className="flex flex-col">
-            <div className="flex flex-wrap gap-0.5 align-baseline">
-              <Link
-                href={card.link ?? card.path}
-                target={!!card.link ? "_blank" : undefined}
-                className={
-                  "text-lg font-medium cursor-pointer hover:underline" +
-                  (!!card.link ? " after:content-['__↗']" : "")
-                }
-              >
-                {card.title}
+    <article className="flex flex-col gap-5 border-t border-neutral-500/15 py-8 first:border-t-0 first:pt-0 3xs:flex-row">
+      <AppIcon app={app} className="h-20 w-20 xs:h-24 xs:w-24" />
+      <div className="flex min-w-0 flex-col gap-3">
+        <div className="flex flex-col gap-1">
+          <h2 className="text-xl font-semibold tracking-tight">
+            {app.path ? (
+              <Link href={app.path} className="transition-colors hover:text-accent">
+                {app.title}
               </Link>
-              {!!card.github && (
-                <a
-                  href={card.github}
-                  target="_blank"
-                  className="hover:opacity-40 hover:animate-scale"
-                >
-                  <div className="w-5.5 mt-0.5 ml-2 bg-current rounded-full">
-                    {githubIcon}
-                  </div>
-                </a>
-              )}
-              {!!card.pub && (
-                <a
-                  href={card.pub}
-                  target="_blank"
-                  className="hover:opacity-40 hover:animate-scale"
-                >
-                  <PubDevIcon className="w-5.5 mt-0.5 mx-3" />
-                </a>
-              )}
-              {!!card.playstore && (
-                <a
-                  href={card.playstore}
-                  target="_blank"
-                  className="hover:opacity-40 hover:animate-scale"
-                >
-                  <GooglePlayIcon className="w-7.5" />
-                </a>
-              )}
-              {!!card.appstore && (
-                <a
-                  href={card.appstore}
-                  target="_blank"
-                  className="hover:opacity-40 hover:animate-scale"
-                >
-                  <AppstoreIcon className="w-5.5 mt-0.5 mx-3" />
-                </a>
-              )}
-            </div>
-            <div className="h-1.5" />
-            <div className="text-base leading-relaxed">
-              <span className="opacity-70 pr-2">{card.description}</span>
-              {!hideLearnMore && (
-                <Link
-                  href={card.path ?? ""}
-                  className="text-md font-medium hover:underline after:content-['_→']"
-                >
-                  Learn More
-                </Link>
-              )}
-            </div>
-          </div>
+            ) : (
+              app.title
+            )}
+          </h2>
+          <p className="flex flex-wrap items-center gap-2 text-sm text-neutral-500">
+            {app.category}
+            {app.under_dev && (
+              <span className="rounded-full bg-accent/10 px-2 py-0.5 text-xs font-medium text-accent">
+                In development
+              </span>
+            )}
+          </p>
+        </div>
+        <p className="max-w-2xl text-[15px] leading-relaxed text-neutral-600 dark:text-neutral-400">
+          {app.description}
+        </p>
+        <div className="flex flex-wrap items-center gap-2 pt-1">
+          {!app.under_dev && app.appstore && (
+            <a href={app.appstore} target="_blank" rel="noopener" className={pillStyle}>
+              <AppstoreIcon className="h-4 w-4" />
+              App Store
+            </a>
+          )}
+          {!app.under_dev && app.playstore && (
+            <a href={app.playstore} target="_blank" rel="noopener" className={pillStyle}>
+              <GooglePlayIcon className="h-4 w-4" />
+              Google Play
+            </a>
+          )}
+          {app.path && (
+            <Link
+              href={app.path}
+              className="px-2 text-[13px] font-medium text-neutral-500 transition-colors hover:text-accent after:content-['_→']"
+            >
+              Details
+            </Link>
+          )}
         </div>
       </div>
-      {!hideTags && !!card.tags && (
-        <div className="flex flex-row flex-wrap gap-2 opacity-90 mt-3">
-          {card.tags.map((tag: any) => {
-            const link = linkByTag(tag);
-            return (
-              <a href={link} target="_blank" key={tag} className={tagStyle}>
-                {tag}
-              </a>
-            );
-          })}
-        </div>
-      )}
-    </div>
+    </article>
   );
 }
 

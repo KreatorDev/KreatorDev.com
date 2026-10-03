@@ -1,90 +1,89 @@
 "use client";
 
+import LogoIcon from "@/assets/icons/logo";
 import MenuIcon from "@/assets/icons/menu";
 import ThemeSwitcher from "@/components/cards/theme/theme-toggle";
 import AppPaths from "@/constants/paths";
+import { brand } from "@/constants/strings";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 import useAppPathname from "../hooks/pathname";
 import cardStyle from "../styles/card";
-import { scrollToTop } from "../utils/window";
 import useDropDownMenu from "./dropdowns/menu";
 
 function Header() {
   const pathname = useAppPathname();
-  const [path, setPath] = useState(pathname);
 
-  useEffect(() => {
-    setPath(pathname);
-  }, [pathname]);
-
-  const themeSwitcher = (
-    <ThemeSwitcher
-      className="hover:animate-none !w-[80px]"
-      thumbClassName="h-7 w-7"
-    />
-  );
-
-  const btnStyle =
-    "py-4 px-6 sm:py-[8px] sm:px-4 dark:hover:bg-neutral-800 hover:bg-neutral-200/70 dark:hover:text-white hover:text-black rounded-full ";
-  const items = AppPaths.main.map((card) => {
-    const isSelected = path === card.path;
-    return (
-      <Link
-        key={card.name}
-        onClick={() => {
-          scrollToTop();
-          setPath(card.path);
-          if (dropDown.isOpen) dropDown.setOpen(false);
-        }}
-        href={card.path}
-      >
-        <div
+  const items = (isMenu: boolean) =>
+    AppPaths.main.map((item) => {
+      const isSelected = pathname === item.path;
+      return (
+        <Link
+          key={item.path}
+          href={item.path}
+          aria-current={isSelected ? "page" : undefined}
+          onClick={() => dropDown.setOpen(false)}
           className={
-            btnStyle +
-            "text-base font-normal min-w-[200px] sm:min-w-0 text-start " +
-            (isSelected ? "text-black dark:text-white" : "")
+            "rounded-full transition-colors hover:bg-neutral-500/10 hover:text-ink dark:hover:text-lighter " +
+            (isMenu
+              ? "block min-w-[200px] px-5 py-3.5 text-base"
+              : "px-4 py-2 text-[15px]") +
+            (isSelected
+              ? " text-ink dark:text-lighter font-medium"
+              : " text-neutral-500")
           }
         >
-          {card.name}
-        </div>
-      </Link>
-    );
-  });
+          {item.name}
+        </Link>
+      );
+    });
 
   const dropDown = useDropDownMenu({
     menu: (
-      <div className={cardStyle + "px-3 py-4 justify-start shadow-md"}>
-        {items}
+      <div
+        className={cardStyle + "!p-2 shadow-lg -translate-x-[calc(100%-44px)]"}
+      >
+        {items(true)}
       </div>
     ),
   });
 
   return (
-    <header className="w-full sticky top-0 !z-50 bg-lighter dark:bg-darker rounded-b-3xl sm:backdrop-blur-md sm:!bg-opacity-90 pt-5 mt-4">
-      <div
-        className={
-          cardStyle +
-          "!p-1 !flex-row items-center justify-between rounded-3xl w-full text-sm text-neutral-500 text-center !px-1.5"
-        }
+    <header className="sticky top-0 z-50 w-full pt-4">
+      <div className="absolute inset-x-0 top-0 bottom-[calc(50%-8px)] -z-10 bg-lighter/80 backdrop-blur-md dark:bg-darker/80" />
+      <nav
+        aria-label="Main"
+        className={cardStyle + "!flex-row !p-1 items-center rounded-full gap-2"}
       >
-        <div className="hidden sm:flex flex-wrap items-center w-full">
-          {items}
+        <Link
+          href="/"
+          aria-label={brand + " home"}
+          className="flex items-center gap-2.5 rounded-full py-1.5 pl-2.5 pr-4 transition-opacity hover:opacity-80"
+        >
+          <LogoIcon className="h-7 w-7 text-accent" />
+          <span className="text-[17px] font-semibold tracking-tight">
+            {brand}
+          </span>
+        </Link>
+        <div className="ml-auto hidden items-center gap-1 sm:flex">
+          {items(false)}
         </div>
-        <div>
+        <ThemeSwitcher
+          className="hover:animate-none !w-[72px] ml-auto sm:ml-2 shrink-0"
+          thumbClassName="h-7 w-7"
+        />
+        <div className="sm:hidden">
           <button
+            type="button"
+            aria-label="Open menu"
+            aria-expanded={dropDown.isOpen}
             onClick={() => dropDown.setOpen(!dropDown.isOpen)}
-            className={btnStyle + "flex sm:hidden !py-1.5 !px-4"}
+            className="flex rounded-full px-3 py-2 hover:bg-neutral-500/10"
           >
-            <MenuIcon
-              className="w-7 h-7 text-dark dark:text-neutral-200"
-              strokeWidth={2}
-            />
+            <MenuIcon className="h-6 w-6" strokeWidth={2} />
           </button>
-          <div className="sm:hidden">{dropDown.dropdown}</div>
+          {dropDown.dropdown}
         </div>
-        {themeSwitcher}
-      </div>
+      </nav>
     </header>
   );
 }

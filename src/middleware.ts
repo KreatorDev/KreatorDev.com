@@ -20,7 +20,7 @@ export function middleware(req: NextRequest) {
     if (app.playstore && os === "android")
       return NextResponse.redirect(app.playstore);
     if (paths.length > 3)
-      return NextResponse.redirect(req.nextUrl.origin + "/" + app.path);
+      return NextResponse.redirect(new URL(app.path, req.nextUrl.origin));
   }
   return next;
 }

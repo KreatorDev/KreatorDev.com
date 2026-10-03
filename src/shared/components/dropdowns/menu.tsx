@@ -5,7 +5,7 @@ import { useState } from "react";
 function useDropDownMenu({ menu }: { menu?: React.ReactNode }) {
   const [isOpen, setOpen] = useState(false);
   const dropdown = (
-    <div className="absolute" role="menu">
+    <div className="absolute">
       {isOpen && (
         <div
           className="fixed inset-0 backdrop-blur-sm bg-neutral-800/20 z-40"

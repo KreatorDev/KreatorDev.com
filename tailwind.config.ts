@@ -5,10 +5,26 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        light: "#EEEEEE",
-        dark: "#171717",
-        lighter: "#F2F2F2",
-        darker: "#0D0D0D",
+        light: "#ECEAE5",
+        dark: "#181716",
+        lighter: "#F5F4F0",
+        darker: "#0E0D0C",
+        surface: "#FDFDFB",
+        ink: "#1A1917",
+        accent: "#E8512A",
+      },
+      fontFamily: {
+        sans: ["var(--font-sans)", "system-ui", "sans-serif"],
+        display: ["var(--font-display)", "Georgia", "serif"],
+      },
+      keyframes: {
+        rise: {
+          from: { opacity: "0", transform: "translateY(14px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
+        },
+      },
+      animation: {
+        rise: "rise 0.8s cubic-bezier(0.22, 1, 0.36, 1) both",
       },
       height: {
         4.5: "18px",

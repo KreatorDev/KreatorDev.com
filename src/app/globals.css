@@ -6,6 +6,20 @@
 	html {
 		scroll-behavior: smooth;
 	}
+
+	.dark {
+		color-scheme: dark;
+	}
+
+	::selection {
+		background-color: rgb(232 81 42 / 0.2);
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		html {
+			scroll-behavior: auto;
+		}
+	}
 }
 
 @keyframes scale {

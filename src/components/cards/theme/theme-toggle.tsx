@@ -16,6 +16,7 @@ export default function ThemeSwitcher({
   return (
     <button
       type="button"
+      aria-label="Toggle dark mode"
       onClick={switchTheme}
       className={
         "flex rounded-full bg-light dark:bg-neutral-800/90 w-full justify-start dark:justify-end transition-all duration-300 hover:animate-scale border outline-none border-transparent hover:border-neutral-200 dark:hover:border-neutral-700/50 " +

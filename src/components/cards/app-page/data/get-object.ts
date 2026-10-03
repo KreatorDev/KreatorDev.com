@@ -1,5 +1,4 @@
 import { mobileApps } from "../../apps/data/mobile-apps";
-import { webApps } from "../../apps/data/web-apps";
 import AppPageType from "./page";
 
 function getAppPageObject(id: string) {
@@ -11,8 +10,8 @@ function getAppPageObject(id: string) {
 }
 
 function getAppPage(id: string) {
-  const apps = [...mobileApps, ...webApps];
-  const appObject = apps.find((app) => app.path === `/${id}`);
+  const path = `/${id}`;
+  const appObject = mobileApps.find((app) => app.path === path);
   if (!appObject) return;
   const pageObject = getAppPageObject(id);
   if (!pageObject) return;
@@ -26,7 +25,7 @@ function getAppPage(id: string) {
   );
   const page: AppPageType = {
     ...pageObject,
-    app: appObject,
+    app: { ...appObject, path },
     appstoreId,
     playstoreId,
   };

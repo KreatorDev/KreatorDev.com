@@ -1,10 +1,14 @@
 class AppPaths {
   static readonly main = [
-    { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
-    { name: "Work", path: "/work" },
-    { name: "Blog", path: "/blog" },
+    { name: "Apps", path: "/apps" },
+    { name: "Company", path: "/company" },
     { name: "Contact", path: "/contact" },
+  ];
+
+  static readonly legal = [
+    { name: "Privacy Policy", path: "/privacy" },
+    { name: "Terms of Use", path: "/terms" },
+    { name: "Account Deletion", path: "/account-deletion" },
   ];
 }
 

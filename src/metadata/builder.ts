@@ -1,4 +1,4 @@
-import { author, host, url, username } from "@/constants/strings";
+import { brand, host, legalName, og, url, username } from "@/constants/strings";
 import { Metadata } from "next";
 import {
   Icon,
@@ -25,12 +25,12 @@ function metadataBuilder(
   return {
     title,
     description,
-    creator: author,
-    publisher: author,
+    creator: legalName,
+    publisher: legalName,
     authors: [
       {
-        name: author,
-        url: url + path,
+        name: legalName,
+        url,
       },
     ],
     twitter: {
@@ -38,16 +38,19 @@ function metadataBuilder(
       title,
       description,
       images: og ? [og] : undefined,
-      creator: "@" + username,
+      site: "@" + username,
     },
-    metadataBase: new URL(url + path),
+    metadataBase: new URL(url),
+    alternates: {
+      canonical: url + path,
+    },
     openGraph: {
       type: "website",
       locale: "en_US",
       url: url + path,
       title,
       description,
-      siteName: title,
+      siteName: brand,
       images: og
         ? [
             {
@@ -61,6 +64,14 @@ function metadataBuilder(
     icons,
     keywords,
   };
+}
+
+export function pageMetadata(
+  name: string,
+  description: string,
+  path: string
+): Metadata {
+  return metadataBuilder(`${name} | ${brand}`, description, { og, path });
 }
 
 export default metadataBuilder;
