@@ -13,11 +13,11 @@ export function middleware(req: NextRequest) {
     const page = getAppPage(id);
     const app = page?.app;
     if (!page || !app) return next;
-    const os = userAgent(req).os.name;
+    const os = userAgent(req).os.name?.toLowerCase();
     if (!os) return next;
-    if (app.appstore && os === "iOS")
+    if (app.appstore && os === "ios")
       return NextResponse.redirect(app.appstore);
-    if (app.playstore && os === "Android")
+    if (app.playstore && os === "android")
       return NextResponse.redirect(app.playstore);
     if (paths.length > 3)
       return NextResponse.redirect(req.nextUrl.origin + "/" + app.path);
