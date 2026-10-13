@@ -1,10 +1,6 @@
-"use client";
-
-import ChevronLeftIcon from "@/assets/icons/chevron-left";
 import { fullAddress, legalName, supportEmail } from "@/constants/strings";
-import cardStyle from "@/shared/styles/card";
 import Link from "next/link";
-import ThemeSwitcher from "../theme/theme-toggle";
+import AppSubpage from "./app-subpage";
 import AppPageType from "./data/page";
 import ThirdPartyList from "./third-party-list";
 
@@ -12,29 +8,10 @@ export default function Terms({ page }: { page: AppPageType }) {
   const app = page.app;
   if (!app) return;
 
-  const now = Date.now();
-  const legalStyle = "text-sm opacity-30 hover:opacity-100 hover:underline p-2";
   const normalStyle = "text-sm text-black dark:text-white opacity-60";
   const boldStyle = normalStyle + " !text-lg !font-bold !opacity-75 pt-3";
   return (
-    <div className={cardStyle + "!p-3"}>
-      <div className="w-full flex flex-row items-center">
-        <Link
-          href={app.path}
-          className="flex flex-row justify-start items-center gap-2 opacity-30 hover:opacity-100 hover:underline px-2"
-        >
-          <div className="hover:animate-scale">
-            <ChevronLeftIcon className="w-6 h-6" />
-          </div>
-          <p className="text-sm">{app.title.toUpperCase()}</p>
-        </Link>
-        <div className="flex-grow" />
-        <ThemeSwitcher
-          className="hover:animate-none !w-[80px]"
-          thumbClassName="h-7 w-7"
-        />
-      </div>
-      <div className="h-1" />
+    <AppSubpage app={app}>
       <div className="flex flex-col px-3 gap-2.5">
         <p className={boldStyle + " !text-2xl pb-1"}>Terms of Use</p>
 
@@ -181,6 +158,18 @@ export default function Terms({ page }: { page: AppPageType }) {
           <li>Find {app.title}, click ”Cancel Subscription”</li>
         </ol>
 
+        <p className={normalStyle}>
+          Subscribed on our website, or need a refund? Web payments are
+          processed by Stripe. See the{" "}
+          <Link
+            className={"!underline !font-semibold"}
+            href={app.path + "/billing"}
+          >
+            Billing
+          </Link>{" "}
+          page to manage, cancel, restore or get a refund for any purchase.
+        </p>
+
         <p className={boldStyle}>Changes to This Terms of Use</p>
         <p className={normalStyle}>
           We may update our Terms of Use from time to time. Thus, you are
@@ -210,12 +199,6 @@ export default function Terms({ page }: { page: AppPageType }) {
           .
         </span>
       </div>
-      <div className="h-12" />
-      <div className="flex flex-row w-full justify-end items-center gap-4 px-2">
-        <Link href={app.path} className={legalStyle}>
-          {app.title} © {new Date(now).getFullYear()} {legalName}
-        </Link>
-      </div>
-    </div>
+    </AppSubpage>
   );
 }

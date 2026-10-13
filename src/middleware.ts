@@ -8,7 +8,7 @@ export function middleware(req: NextRequest) {
   if (paths.length > 1) {
     if (paths.length <= 2) return next;
     const lastPath = paths[paths.length - 1];
-    if (lastPath === "privacy" || lastPath === "terms") return next;
+    if (["privacy", "terms", "billing"].includes(lastPath)) return next;
     const id = paths[1];
     const page = getAppPage(id);
     const app = page?.app;

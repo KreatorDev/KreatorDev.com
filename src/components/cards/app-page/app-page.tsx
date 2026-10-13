@@ -92,6 +92,10 @@ export default function AppPage({ page }: { page: AppPageType }) {
             </Link>
           )}
           <div className="w-1 h-1 bg-neutral-500/80 rounded-full" />
+          <Link href={app.path + "/billing"} className={legalStyle}>
+            Billing
+          </Link>
+          <div className="w-1 h-1 bg-neutral-500/80 rounded-full" />
           <Link href="/contact" className={legalStyle}>
             Contact Us
           </Link>

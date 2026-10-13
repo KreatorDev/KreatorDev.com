@@ -7,7 +7,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const pages = ["", ...AppPaths.main.map((item) => item.path), founder.path];
   const legal = AppPaths.legal.map((item) => item.path);
   const apps = mobileApps.flatMap((app) =>
-    app.path ? [app.path, app.path + "/privacy", app.path + "/terms"] : []
+    app.path
+      ? [
+          app.path,
+          app.path + "/privacy",
+          app.path + "/terms",
+          app.path + "/billing",
+        ]
+      : [],
   );
   return [...pages, ...apps, ...legal].map((path) => ({ url: url + path }));
 }

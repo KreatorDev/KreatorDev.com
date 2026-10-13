@@ -16,6 +16,7 @@ const appStoreUrl =
   "https://apps.apple.com/us/developer/kreatordev-llc/id1634077382";
 const googlePlayUrl =
   "https://play.google.com/store/apps/dev?id=5086245986558832314";
+const stripePortal = "";
 
 const address = {
   street: "444 Alaska Ave Ste AMI460",
@@ -55,6 +56,7 @@ export {
   legalName,
   linkedinUsername,
   og,
+  stripePortal,
   supportEmail,
   tagline,
   url,

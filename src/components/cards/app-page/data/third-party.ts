@@ -12,6 +12,11 @@ const thirdPartyServices = [
         privacy: "https://policies.google.com/privacy",
         terms: "https://play.google.com/about/play-terms/",
       },
+      {
+        name: "Stripe",
+        privacy: "https://stripe.com/privacy",
+        terms: "https://stripe.com/legal/consumer",
+      },
     ],
   },
   {
