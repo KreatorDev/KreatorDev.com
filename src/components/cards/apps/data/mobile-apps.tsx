@@ -2,6 +2,18 @@ import AppItemType from "./app";
 
 export const mobileApps: AppItemType[] = [
   {
+    title: "Steady",
+    description:
+      "Snap your broker screen or log a trade in 10 seconds. See every day on a P&L calendar and how much room is left before a prop firm breach.",
+    category: "Finance",
+    image: "/works/steady/logo.png",
+    appstore: "https://apps.apple.com/app/id6822275138",
+    playstore:
+      "https://play.google.com/store/apps/details?id=com.kreatordev.steady",
+    path: "/steady",
+    hasBorder: true,
+  },
+  {
     title: "FuturPedia",
     description:
       "The axioms of math, logic, physics and CS in one offline reference, with a 2-minute daily review that makes them stick.",
