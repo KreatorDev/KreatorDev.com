@@ -2,6 +2,18 @@ import AppItemType from "./app";
 
 export const mobileApps: AppItemType[] = [
   {
+    title: "FuturPedia",
+    description:
+      "The axioms of math, logic, physics and CS in one offline reference, with a 2-minute daily review that makes them stick.",
+    category: "Education",
+    image: "/works/futurpedia/logo.png",
+    appstore: "https://apps.apple.com/app/id6822275024",
+    playstore:
+      "https://play.google.com/store/apps/details?id=com.kreatordev.futurpedia",
+    path: "/futurpedia",
+    hasBorder: true,
+  },
+  {
     title: "HeightPal",
     description:
       "Predict your adult height free, track your family's growth on a warm chart, and build honest daily habits — no bait, no paywall tricks, cancel anytime.",
