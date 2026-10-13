@@ -11,6 +11,17 @@ export const mobileApps: AppItemType[] = [
     playstore:
       "https://play.google.com/store/apps/details?id=com.kreatordev.steady",
     path: "/steady",
+    keywords: [
+      "p&l calendar",
+      "trading journal",
+      "day trading journal",
+      "prop firm",
+      "pnl tracker",
+      "drawdown",
+      "funded account",
+      "futures",
+      "forex",
+    ],
     hasBorder: true,
   },
   {
