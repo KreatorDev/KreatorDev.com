@@ -2,6 +2,18 @@ import AppItemType from "./app";
 
 export const mobileApps: AppItemType[] = [
   {
+    title: "FitDuo",
+    description:
+      "Workout accountability for couples. Snap a quick check-in, see your partner's, and whoever misses owes dinner. Free for both of you.",
+    category: "Health & Fitness",
+    image: "/works/fitduo/logo.png",
+    appstore: "https://apps.apple.com/app/id6829912577",
+    playstore:
+      "https://play.google.com/store/apps/details?id=com.kreatordev.fitduo",
+    path: "/fitduo",
+    hasBorder: true,
+  },
+  {
     title: "Steady",
     description:
       "Snap your broker screen or log a trade in 10 seconds. See every day on a P&L calendar and how much room is left before a prop firm breach.",

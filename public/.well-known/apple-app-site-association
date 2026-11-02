@@ -47,6 +47,10 @@
       {
         "appID": "ZY25APARZZ.com.kreatordev.steady",
         "paths": ["/steady/*"]
+      },
+      {
+        "appID": "ZY25APARZZ.com.kreatordev.fitduo",
+        "paths": ["/fitduo/*"]
       }
     ]
   }
