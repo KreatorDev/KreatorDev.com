@@ -51,6 +51,10 @@
       {
         "appID": "ZY25APARZZ.com.kreatordev.fitduo",
         "paths": ["/fitduo/*"]
+      },
+      {
+        "appID": "ZY25APARZZ.com.kreatordev.fastfoodmacros",
+        "paths": ["/fastfoodmacros/*"]
       }
     ]
   }

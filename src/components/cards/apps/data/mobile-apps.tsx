@@ -2,6 +2,18 @@ import AppItemType from "./app";
 
 export const mobileApps: AppItemType[] = [
   {
+    title: "Fast Food Macros",
+    description:
+      "Pick your goal and a chain — get the best orders with the chain's own calories and macros. Free, no account.",
+    category: "Health & Fitness",
+    image: "/works/fastfoodmacros/logo.png",
+    appstore: "https://apps.apple.com/app/id6829923718",
+    playstore:
+      "https://play.google.com/store/apps/details?id=com.kreatordev.fastfoodmacros",
+    path: "/fastfoodmacros",
+    hasBorder: true,
+  },
+  {
     title: "FitDuo",
     description:
       "Workout accountability for couples. Snap a quick check-in, see your partner's, and whoever misses owes dinner. Free for both of you.",
